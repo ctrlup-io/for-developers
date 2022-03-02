@@ -1,52 +1,81 @@
-# Welcome to Remix!
+<h1 align="center">For developers</h1>
 
-- [Remix Docs](https://remix.run/docs)
+<p align="center">Ctrl Up Website for developers</p>
 
-## Netlify Setup
+## Introduction
 
-1. Install the [Netlify CLI](https://www.netlify.com/products/dev/):
+Ctrl Up have to talk to the developers (and all products/projects development team members).
+This repository hosts a React application.
+
+## Contributing
+
+The best way to achieve this is together! That's why we are on GitHub. We would love contributions from the community (bug reports, feature requests, suggestions, Pull Requests, whatever you want!).
+
+[Yarn](https://classic.yarnpkg.com/en/docs/cli/) is used as package manager. [Semantic Release](https://semantic-release.gitbook.io/semantic-release/) is used to manage the whole package release workflow.
+
+Application architecture is based on [Remix](https://remix.run/docs). Local development server and deployment are handled with [Netlify CLI](https://docs.netlify.com/cli/get-started/).
+
+To setup your local dev environment:
+
+1. Install [Yarn](https://classic.yarnpkg.com/en/docs/install)
+
+2. Install the [Netlify CLI](https://www.netlify.com/products/dev/):
 
 ```sh
-npm i -g netlify-cli
+yarn global add netlify-cli
 ```
 
 If you have previously installed the Netlify CLI, you should update it to the latest version:
 
 ```sh
-npm i -g netlify-cli@latest
+yarn global add netlify-cli@latest
 ```
 
-2. Sign up and log in to Netlify:
+3. Clone repository:
 
 ```sh
-netlify login
+git clone git@github.com:ctrlup-io/rainbow-react.git
+cd rainbow-react
 ```
 
-3. Create a new site:
+4. Install dependencies:
 
 ```sh
-netlify init
+yarn install
 ```
 
-## Development
+5. See [more available scripts](README.md#scripts)
 
-The Netlify CLI starts your app in development mode, rebuilding assets on file changes.
+## Available Scripts
 
-```sh
-npm run dev
-```
+In the project directory, you can run:
+
+### `start`
+
+Watches your application files and builds your app for development when files change.
 
 Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
 
-## Deployment
+### `commit`
 
-There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
+Runs the [`git-cz`](https://github.com/streamich/git-cz) CLI to generate commit messages according to the [_Conventional Commit specifications_](https://www.conventionalcommits.org/en/v1.0.0/#specification).
 
-```sh
-$ npm run build
-# preview deployment
-$ netlify deploy
+### `format`
 
-# production deployment
-$ netlify deploy --prod
-```
+Runs [Prettier](https://prettier.io/) with [basic configuration](https://prettier.io/docs/en/configuration.html#basic-configuration).
+
+We recommend to use Prettier in your IDE, e.g. in Visual Studio code with [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+
+### `lint`
+
+Runs [ESLint](https://eslint.org/) with [standard configuration](https://standardjs.com/).
+
+### `build`
+
+Builds app for production with [Remix](https://remix.run/docs/en/v1/other-api/dev#remix-build).
+
+### `release:dry`
+
+Runs [Semantic Release](https://semantic-release.gitbook.io/semantic-release/) in dry-run mode. It allows you to preview the pending release.
+
+You have to set `NPM_TOKEN` and `GITHUB_TOKEN` in `.env` file.

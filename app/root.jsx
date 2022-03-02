@@ -8,10 +8,11 @@ import {
 } from "remix";
 
 export function meta() {
-  return { title: "New Remix App" };
+  return { title: "Ctrl Up, une ESN régulière" };
 }
 
 export default function App() {
+  console.log(process.env.NODE_ENV);
   return (
     <html lang="en">
       <head>

@@ -2,13 +2,63 @@
   "name": "for-developers",
   "private": true,
   "description": "",
+  "version": "0.1.0",
   "license": "",
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "dev": "cross-env NODE_ENV=development netlify dev",
+    "commit": "git-cz",
+    "format": "prettier --write {*,app/**/*}.{jsx,json,md}",
     "postinstall": "remix setup node",
-    "start": "cross-env NODE_ENV=production netlify dev"
+    "lint": "eslint --cache .",
+    "release:dry": "node-env-run --exec 'semantic-release --dry-run'",
+    "start": "netlify dev"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,json,md,mdx}": "prettier --write",
+    "package.json": "sort-package-json"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@remix-run/eslint-config"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "public",
+    "netlify"
+  ],
+  "release": {
+    "branches": [
+      "main",
+      "alpha",
+      "beta"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "docs/CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "docs/CHANGELOG.md",
+            "package.json"
+          ]
+        }
+      ]
+    ]
   },
   "dependencies": {
     "@netlify/functions": "^0.10.0",
@@ -19,12 +69,26 @@
     "remix": "^1.2.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@remix-run/dev": "^1.2.3",
     "@remix-run/eslint-config": "^1.2.3",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "cross-env": "^7.0.3",
-    "eslint": "^8.9.0"
+    "eslint": "^8.9.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "node-env-run": "^4.0.2",
+    "prettier": "^2.5.1",
+    "semantic-release": "^19.0.2",
+    "sort-package-json": "^1.54.0",
+    "typescript": "^4.6.2"
   },
   "engines": {
     "node": ">=14"
+  },
+  "repository": {
+    "url": "https://github.com/ctrlup-io/for-developers"
   }
 }
