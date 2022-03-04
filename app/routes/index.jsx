@@ -1,6 +1,12 @@
 import { colors } from "@ctrlup/rainbow-react";
 import { Box, Button, Container, Typography } from "@mui/material";
 
+export function meta() {
+  return {
+    title: "Accueil",
+  };
+}
+
 export default function Index() {
   return (
     <Container>
