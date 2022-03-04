@@ -5,6 +5,7 @@ module.exports = {
   serverBuildTarget: "netlify",
   server: "./server.js",
   ignoredRouteFiles: [".*"],
+  serverDependenciesToBundle: ["@ctrlup/rainbow-react"],
   // appDirectory: "app",
   // assetsBuildDirectory: "public/build",
   // serverBuildPath: "netlify/functions/server/index.js",
