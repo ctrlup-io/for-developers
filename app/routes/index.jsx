@@ -1,8 +1,48 @@
+import { colors } from "@ctrlup/rainbow-react";
+import { Box, Button, Container, Typography } from "@mui/material";
+
 export default function Index() {
   return (
-    <div>
-      <h5>Ctrl Up, une ESN régulière.</h5>
-      <h1>Forge tes aptitudes de développeurs</h1>
-    </div>
+    <Container>
+      <br />
+      <Typography variant="h5">Ctrl Up, une ESN régulière.</Typography>
+      <Typography variant="h1">
+        Forge tes aptitudes de{" "}
+        <Typography
+          sx={{
+            background: colors.RAINBOW,
+            WebkitBackgroundClip: "text",
+            MozBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            MozTextFillColor: "transparent",
+          }}
+          variant="h1"
+          component="span"
+        >
+          développeurs
+        </Typography>
+      </Typography>
+      <br />
+      <Box
+        sx={{
+          width: "100%",
+          height: "auto",
+          display: "block",
+        }}
+        component="img"
+        src="https://picsum.photos/seed/picsum/536/354"
+        alt="random"
+      />
+      <br />
+      <Typography>
+        Apporte de la valeur à ton rôle de développeur, prend de la hauteur dans
+        le métier et grimpe en équipe. Notre crédo ? Échanger et partager pour
+        évoluer ensemble.
+      </Typography>
+      <br />
+      <Button color="primary" variant="contained" fullWidth>
+        Contactez-nous
+      </Button>
+    </Container>
   );
 }
