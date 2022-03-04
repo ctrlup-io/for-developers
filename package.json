@@ -12,7 +12,8 @@
     "postinstall": "remix setup node",
     "lint": "eslint --cache .",
     "release:dry": "node-env-run --exec 'semantic-release --dry-run'",
-    "start": "netlify dev"
+    "start": "netlify dev",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "commitlint": {
     "extends": [
