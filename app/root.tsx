@@ -16,11 +16,12 @@ import {
 } from "@mui/material/styles";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import { theme } from "@ctrlup/rainbow-react";
-import { CssBaseline, ThemeOptions } from "@mui/material";
+import { CssBaseline, ThemeOptions, Toolbar } from "@mui/material";
 
 import ServerStyleContext from "./styles/server.context";
 import ClientStyleContext from "./styles/client.context";
 import RainbowSvg from "./components/Rainbow";
+import HideAppBar from "./components/HideAppBar";
 
 const muiTheme = createTheme(theme as ThemeOptions);
 
@@ -99,7 +100,11 @@ export default function App() {
       <EmotionThemeProvider theme={muiTheme}>
         <MuiThemeProvider theme={muiTheme}>
           <CssBaseline />
-          <Outlet />
+          <HideAppBar />
+          <main>
+            <Toolbar />
+            <Outlet />
+          </main>
         </MuiThemeProvider>
       </EmotionThemeProvider>
     </Document>
