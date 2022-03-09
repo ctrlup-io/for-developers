@@ -34,8 +34,8 @@ yarn global add netlify-cli@latest
 3. Clone repository:
 
 ```sh
-git clone git@github.com:ctrlup-io/rainbow-react.git
-cd rainbow-react
+git clone git@github.com:ctrlup-io/for-developers.git
+cd for-developers
 ```
 
 4. Install dependencies:
