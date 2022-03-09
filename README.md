@@ -78,4 +78,4 @@ Builds app for production with [Remix](https://remix.run/docs/en/v1/other-api/de
 
 Runs [Semantic Release](https://semantic-release.gitbook.io/semantic-release/) in dry-run mode. It allows you to preview the pending release.
 
-You have to set `NPM_TOKEN` and `GITHUB_TOKEN` in `.env` file.
+You have to set `GITHUB_TOKEN` in `.env` file.
