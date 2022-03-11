@@ -1,5 +1,6 @@
 import { colors } from "@ctrlup/rainbow-react";
 import { Box, Button, Container, Typography } from "@mui/material";
+import { Link } from "remix";
 
 export function meta() {
   return {
@@ -46,7 +47,13 @@ export default function Index() {
         évoluer ensemble.
       </Typography>
       <br />
-      <Button color="primary" variant="contained" fullWidth>
+      <Button
+        color="primary"
+        variant="contained"
+        fullWidth
+        component={Link}
+        to="/contact"
+      >
         Contactez-nous
       </Button>
     </Container>
