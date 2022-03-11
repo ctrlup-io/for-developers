@@ -1,6 +1,6 @@
 import { hydrate } from "react-dom";
 import { RemixBrowser } from "remix";
-import React, { useState } from "react";
+import { useCallback, useState } from "react";
 import { CacheProvider } from "@emotion/react";
 
 import createEmotionCache from "./styles/createEmotionCache";
@@ -13,9 +13,9 @@ interface ClientCacheProviderProps {
 function ClientCacheProvider({ children }: ClientCacheProviderProps) {
   const [cache, setCache] = useState(createEmotionCache());
 
-  function reset() {
+  const reset = useCallback(() => {
     setCache(createEmotionCache());
-  }
+  }, []);
 
   return (
     <ClientStyleContext.Provider value={{ reset }}>
