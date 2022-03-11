@@ -56,6 +56,8 @@ Watches your application files and builds your app for development when files ch
 
 Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
 
+To take advantage of the live reload functionality you have to set the `NODE_ENV` environment variable to `development` in `.env` file.
+
 ### `commit`
 
 Runs the [`git-cz`](https://github.com/streamich/git-cz) CLI to generate commit messages according to the [_Conventional Commit specifications_](https://www.conventionalcommits.org/en/v1.0.0/#specification).
