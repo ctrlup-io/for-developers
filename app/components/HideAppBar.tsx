@@ -2,21 +2,16 @@ import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-  Typography,
   useScrollTrigger,
   Slide,
   IconButton,
   Drawer,
   Box,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
 } from "@mui/material";
-import { colors, ContactIcon, HomeIcon } from "@ctrlup/rainbow-react";
-import { useLocation } from "react-router";
+import { colors } from "@ctrlup/rainbow-react";
 import { Menu as MenuIcon } from "@mui/icons-material";
-import { NavLink } from "remix";
+import NavigationMenu from "./NavigationMenu";
+import NavigationTitle from "./NavigationTitle";
 
 const drawerWidth = 240;
 
@@ -35,15 +30,7 @@ function HideOnScroll(props: HideOnScrollProps) {
   );
 }
 
-const routes = [
-  { path: "/", name: "Accueil", Icon: HomeIcon },
-  { path: "/contact", name: "Contact", Icon: ContactIcon },
-];
-
 export default function HideAppBar() {
-  const location = useLocation();
-  const route = routes.find((route) => route.path.match(location.pathname));
-
   const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -69,16 +56,7 @@ export default function HideAppBar() {
                 }}
               />
             </IconButton>
-            {route && (
-              <>
-                <route.Icon
-                  color="action"
-                  fontSize="small"
-                  sx={{ marginRight: (theme) => theme.spacing(2) }}
-                />
-                <Typography variant="h4">{route.name}</Typography>
-              </>
-            )}
+            <NavigationTitle />
           </Toolbar>
         </AppBar>
       </HideOnScroll>
@@ -96,35 +74,7 @@ export default function HideAppBar() {
       >
         <Toolbar />
         <Box sx={{ overflow: "auto" }}>
-          <List>
-            {routes.map((route) => (
-              <NavLink
-                key={route.name}
-                to={route.path}
-                style={{
-                  textDecoration: "none",
-                }}
-                onClick={toggleDrawer}
-              >
-                {({ isActive }) => (
-                  <ListItem button>
-                    <ListItemIcon>
-                      <route.Icon
-                        color={isActive ? "action" : "default"}
-                        fontSize="small"
-                      />
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={route.name}
-                      primaryTypographyProps={{
-                        color: isActive ? "textPrimary" : "textSecondary",
-                      }}
-                    />
-                  </ListItem>
-                )}
-              </NavLink>
-            ))}
-          </List>
+          <NavigationMenu toggle={toggleDrawer} />
         </Box>
       </Drawer>
     </>
