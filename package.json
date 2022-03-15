@@ -8,7 +8,7 @@
   "scripts": {
     "build": "remix build",
     "commit": "git-cz",
-    "format": "prettier --write {*,app/**/*}.{jsx,json,md}",
+    "format": "prettier --write {*,app/**/*}.{js,jsx,ts,tsx,json,md}",
     "postinstall": "remix setup node",
     "lint": "eslint --cache .",
     "release:dry": "node-env-run --exec 'semantic-release --dry-run'",
