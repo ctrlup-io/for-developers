@@ -1,7 +1,7 @@
 import React from "react";
 import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import { NavLink } from "remix";
-import { ContactIcon, HomeIcon } from "@ctrlup/rainbow-react";
+import { AboutIcon, ContactIcon, HomeIcon } from "@ctrlup/rainbow-react";
 
 function NavigationMenu({ toggle }: { toggle?: () => void }) {
   return (
@@ -39,6 +39,7 @@ function NavigationMenu({ toggle }: { toggle?: () => void }) {
 
 export const routes: Route[] = [
   { path: "/", name: "Accueil", Icon: HomeIcon },
+  { path: "/about", name: "À propos", Icon: AboutIcon },
   { path: "/contact", name: "Contact", Icon: ContactIcon },
 ];
 
