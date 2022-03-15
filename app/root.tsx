@@ -8,15 +8,22 @@ import {
   useCatch,
 } from "remix";
 import { useContext, useEffect } from "react";
-import { withEmotionCache } from "@emotion/react";
-import styled from "@emotion/styled";
 import {
   createTheme,
   ThemeProvider as MuiThemeProvider,
 } from "@mui/material/styles";
-import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
+import {
+  ThemeProvider as EmotionThemeProvider,
+  withEmotionCache,
+} from "@emotion/react";
 import { theme } from "@ctrlup/rainbow-react";
-import { CssBaseline, ThemeOptions, Toolbar } from "@mui/material";
+import {
+  CssBaseline,
+  ThemeOptions,
+  Toolbar,
+  Container,
+  Alert,
+} from "@mui/material";
 
 import ServerStyleContext from "./styles/server.context";
 import ClientStyleContext from "./styles/client.context";
@@ -24,11 +31,6 @@ import RainbowSvg from "./components/Rainbow";
 import HideAppBar from "./components/HideAppBar";
 
 const muiTheme = createTheme(theme as ThemeOptions);
-
-const Container = styled("div")`
-  background-color: #ff0000;
-  padding: 1em;
-`;
 
 export function meta() {
   return { title: "Ctrl Up, une ESN régulière" };
@@ -102,10 +104,16 @@ export default function App() {
         <MuiThemeProvider theme={muiTheme}>
           <CssBaseline />
           <HideAppBar />
-          <main>
-            <Toolbar />
+          <Toolbar />
+          <Container
+            component="main"
+            sx={{
+              marginTop: (theme) => theme.spacing(2),
+              marginBottom: (theme) => theme.spacing(8),
+            }}
+          >
             <Outlet />
-          </main>
+          </Container>
         </MuiThemeProvider>
       </EmotionThemeProvider>
     </Document>
@@ -117,10 +125,16 @@ export function CatchBoundary() {
 
   return (
     <Document title={`${caught.status} ${caught.statusText}`}>
-      <Container>
-        <p>
+      <Container
+        component="main"
+        sx={{
+          marginTop: (theme) => theme.spacing(2),
+          marginBottom: (theme) => theme.spacing(8),
+        }}
+      >
+        <Alert severity="error">
           [CatchBoundary]: {caught.status} {caught.statusText}
-        </p>
+        </Alert>
       </Container>
     </Document>
   );
@@ -129,8 +143,16 @@ export function CatchBoundary() {
 export function ErrorBoundary({ error }: { error: Error }) {
   return (
     <Document title="Error!">
-      <Container>
-        <p>[ErrorBoundary]: There was an error: {error.message}</p>
+      <Container
+        component="main"
+        sx={{
+          marginTop: (theme) => theme.spacing(2),
+          marginBottom: (theme) => theme.spacing(8),
+        }}
+      >
+        <Alert severity="error">
+          [ErrorBoundary]: There was an error: {error.message}
+        </Alert>
       </Container>
     </Document>
   );

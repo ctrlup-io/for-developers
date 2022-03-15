@@ -16,12 +16,7 @@ export async function loader() {
 export default function Contact() {
   const data = useLoaderData();
   return (
-    <Container
-      sx={{
-        marginTop: (theme) => theme.spacing(2),
-        marginBottom: (theme) => theme.spacing(2),
-      }}
-    >
+    <>
       <Typography
         variant="h1"
         sx={{
@@ -103,6 +98,6 @@ export default function Contact() {
       <Button color="primary" variant="contained" fullWidth>
         Envoyer le message
       </Button>
-    </Container>
+    </>
   );
 }
