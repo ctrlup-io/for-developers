@@ -40,9 +40,6 @@ export default function HideAppBar() {
               aria-label="open drawer"
               onClick={toggleDrawer}
               edge="start"
-              sx={{
-                marginRight: (theme) => theme.spacing(2),
-              }}
             >
               <MenuIcon
                 sx={{

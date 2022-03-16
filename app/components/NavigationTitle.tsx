@@ -10,11 +10,7 @@ function NavigationTitle() {
   if (!route) return null;
   return (
     <>
-      <route.Icon
-        color="action"
-        fontSize="small"
-        sx={{ marginRight: (theme) => theme.spacing(2) }}
-      />
+      <route.Icon color="action" fontSize="small" sx={{ mr: 2 }} />
       <Typography variant="h4">{route.name}</Typography>
     </>
   );
