@@ -1,3 +1,18 @@
+# [1.1.0](https://github.com/ctrlup-io/for-developers/compare/v1.0.0...v1.1.0) (2022-03-16)
+
+
+### Bug Fixes
+
+* 🐛 memoize emotion cache setting ([56d5647](https://github.com/ctrlup-io/for-developers/commit/56d5647c6e2d18a6fb29aa477e1e0d6f139222d9))
+* 🐛 set main top spacing iso using <Toolbar> placeholder ([8f30675](https://github.com/ctrlup-io/for-developers/commit/8f306753e2b95723ae3ca7e13aba7820991aeef7))
+* 🐛 use spacing instead of line breaks ([c7189bc](https://github.com/ctrlup-io/for-developers/commit/c7189bc0fadf2c84b23582186dda6be3bfe668aa))
+
+
+### Features
+
+* 🎸 contact form on /contact route ([6641330](https://github.com/ctrlup-io/for-developers/commit/6641330d820b6abe7708cbcdef3c55c06fb02e02))
+* 🎸 navigate between pages with left menu ([0137af3](https://github.com/ctrlup-io/for-developers/commit/0137af3be8f90d10af4cd8b5a4bf7358ecafd734))
+
 # 1.0.0 (2022-03-04)
 
 
