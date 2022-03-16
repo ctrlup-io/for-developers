@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { colors } from "@ctrlup/rainbow-react";
 import { Menu as MenuIcon } from "@mui/icons-material";
+
 import NavigationMenu from "./NavigationMenu";
 import NavigationTitle from "./NavigationTitle";
 
@@ -65,7 +66,7 @@ export default function HideAppBar() {
         }}
       >
         <Toolbar />
-        <Box sx={{ overflow: "auto" }}>
+        <Box overflow="auto">
           <NavigationMenu toggle={toggleDrawer} />
         </Box>
       </Drawer>

@@ -105,8 +105,8 @@ export default function App() {
           <Container
             component="main"
             sx={{
-              marginTop: (theme) => theme.spacing(10),
-              marginBottom: (theme) => theme.spacing(8),
+              mt: 10,
+              mb: 8,
             }}
           >
             <Outlet />
@@ -125,8 +125,8 @@ export function CatchBoundary() {
       <Container
         component="main"
         sx={{
-          marginTop: (theme) => theme.spacing(2),
-          marginBottom: (theme) => theme.spacing(8),
+          mt: 2,
+          mb: 8,
         }}
       >
         <Alert severity="error">
@@ -143,8 +143,8 @@ export function ErrorBoundary({ error }: { error: Error }) {
       <Container
         component="main"
         sx={{
-          marginTop: (theme) => theme.spacing(2),
-          marginBottom: (theme) => theme.spacing(8),
+          mt: 2,
+          mb: 8,
         }}
       >
         <Alert severity="error">

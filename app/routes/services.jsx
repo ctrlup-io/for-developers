@@ -23,30 +23,20 @@ export function meta() {
 export default function About() {
   return (
     <>
-      <Typography variant="h1">On sait faire, et on le fait bien</Typography>
-      <Typography
-        sx={{
-          marginTop: (theme) => theme.spacing(4),
-        }}
-      >
+      <Typography variant="h1" mb={4}>
+        On sait faire, et on le fait bien
+      </Typography>
+      <Typography mb={8}>
         Au même titre que les ESN, mais en beaucoup mieux, nous apportons
         plusieurs choses aux développeurs de la communauté. D'abord, Ctrl Up
         propose un modèle fondé sur quatre étapes, de l'arrivée d'un développeur
         à son ascension vers la séniorité.
       </Typography>
-      <Typography
-        variant="h5"
-        fontWeight={700}
-        sx={{
-          marginTop: (theme) => theme.spacing(8),
-        }}
-      >
+      <Typography variant="h5" fontWeight={700} mb={2}>
         Le cheminement du développeur :
       </Typography>
       <StepCard
-        sx={{
-          marginTop: (theme) => theme.spacing(2),
-        }}
+        sx={{ mb: 2 }}
         title="Le sentier"
         subtitle="intégration"
         Icon={ShoePrintsIcon}
@@ -57,9 +47,7 @@ export default function About() {
         </Typography>
       </StepCard>
       <StepCard
-        sx={{
-          marginTop: (theme) => theme.spacing(2),
-        }}
+        sx={{ mb: 2 }}
         title="Le balisage"
         subtitle="placement"
         Icon={SignIcon}
@@ -70,9 +58,7 @@ export default function About() {
         </Typography>
       </StepCard>
       <StepCard
-        sx={{
-          marginTop: (theme) => theme.spacing(2),
-        }}
+        sx={{ mb: 2 }}
         title="L’ascension"
         subtitle="formation"
         Icon={HikingIcon}
@@ -83,9 +69,7 @@ export default function About() {
         </Typography>
       </StepCard>
       <StepCard
-        sx={{
-          marginTop: (theme) => theme.spacing(2),
-        }}
+        sx={{ mb: 8 }}
         title="La cordée"
         subtitle="entraide"
         Icon={SignatureIcon}
@@ -96,19 +80,10 @@ export default function About() {
           collaborateurs et profiter d'un esprit de famille.
         </Typography>
       </StepCard>
-      <Typography
-        variant="h1"
-        sx={{
-          marginTop: (theme) => theme.spacing(8),
-        }}
-      >
+      <Typography variant="h1" mb={2}>
         Des avantages pour grimper plus haut{" "}
       </Typography>
-      <Typography
-        sx={{
-          marginTop: (theme) => theme.spacing(2),
-        }}
-      >
+      <Typography mb={8}>
         Notre méthode permet aux membres de progresser rapidement, surtout quand
         on débute sa carrière ou qu'on essaie d'acquérir le statut de senior.
         Les valeurs de polyvalence et d'ouverture que nous transmettons sont
@@ -120,46 +95,29 @@ export default function About() {
         missions adéquates au profil.
       </Typography>
       <Box
-        sx={{
-          width: "100%",
-          height: "auto",
-          marginTop: (theme) => theme.spacing(4),
-        }}
+        width="100%"
+        height="auto"
+        mb={8}
         component="img"
         loading="lazy"
         src="https://picsum.photos/seed/picsum/536/354"
         alt="random"
       />
-      <CollapseCard
-        title="Aventure humaine"
-        sx={{
-          marginTop: (theme) => theme.spacing(4),
-        }}
-      >
+      <CollapseCard title="Aventure humaine" sx={{ mb: 2 }}>
         <Typography>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
           senectus pellentesque quam sed tellus, sapien non, scelerisque.
           Ullamcorper quam odio a quam in.
         </Typography>
       </CollapseCard>
-      <CollapseCard
-        title="Réseau consolidé"
-        sx={{
-          marginTop: (theme) => theme.spacing(2),
-        }}
-      >
+      <CollapseCard title="Réseau consolidé" sx={{ mb: 2 }}>
         <Typography>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
           senectus pellentesque quam sed tellus, sapien non, scelerisque.
           Ullamcorper quam odio a quam in.
         </Typography>
       </CollapseCard>
-      <CollapseCard
-        title="Progression rapide"
-        sx={{
-          marginTop: (theme) => theme.spacing(2),
-        }}
-      >
+      <CollapseCard title="Progression rapide" sx={{ mb: 2 }}>
         <Typography>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
           senectus pellentesque quam sed tellus, sapien non, scelerisque.
@@ -172,9 +130,6 @@ export default function About() {
         fullWidth
         component={Link}
         to="/contact"
-        sx={{
-          marginTop: (theme) => theme.spacing(2),
-        }}
       >
         Contactez-nous
       </Button>
