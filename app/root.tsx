@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
   useCatch,
 } from "remix";
-import { useContext, useEffect } from "react";
+import { ReactNode, useContext, useEffect } from "react";
 import {
   createTheme,
   ThemeProvider as MuiThemeProvider,
@@ -17,12 +17,7 @@ import {
   withEmotionCache,
 } from "@emotion/react";
 import { theme } from "@ctrlup/rainbow-react";
-import {
-  CssBaseline,
-  ThemeOptions,
-  Container,
-  Alert,
-} from "@mui/material";
+import { CssBaseline, ThemeOptions, Container, Alert } from "@mui/material";
 
 import ServerStyleContext from "./styles/server.context";
 import ClientStyleContext from "./styles/client.context";
@@ -35,13 +30,12 @@ export function meta() {
   return { title: "Ctrl Up, une ESN régulière" };
 }
 
-interface DocumentProps {
-  children: React.ReactNode;
-  title?: string;
-}
 
 const Document = withEmotionCache(
-  ({ children, title }: DocumentProps, emotionCache) => {
+  ({ children, title }: {
+    children: ReactNode;
+    title?: string;
+  }, emotionCache) => {
     const serverStyleData = useContext(ServerStyleContext);
     const clientStyleData = useContext(ClientStyleContext);
 
