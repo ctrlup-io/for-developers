@@ -20,7 +20,6 @@ import { theme } from "@ctrlup/rainbow-react";
 import {
   CssBaseline,
   ThemeOptions,
-  Toolbar,
   Container,
   Alert,
 } from "@mui/material";
@@ -104,11 +103,10 @@ export default function App() {
         <MuiThemeProvider theme={muiTheme}>
           <CssBaseline />
           <HideAppBar />
-          <Toolbar />
           <Container
             component="main"
             sx={{
-              marginTop: (theme) => theme.spacing(2),
+              marginTop: (theme) => theme.spacing(10),
               marginBottom: (theme) => theme.spacing(8),
             }}
           >
