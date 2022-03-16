@@ -15,12 +15,7 @@ import NavigationTitle from "./NavigationTitle";
 
 const drawerWidth = 240;
 
-interface HideOnScrollProps {
-  children: React.ReactElement;
-}
-
-function HideOnScroll(props: HideOnScrollProps) {
-  const { children } = props;
+function HideOnScroll({ children }: { children: React.ReactElement }) {
   const trigger = useScrollTrigger();
 
   return (

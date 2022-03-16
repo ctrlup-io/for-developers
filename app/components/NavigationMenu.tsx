@@ -3,7 +3,7 @@ import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import { NavLink } from "remix";
 import { ContactIcon, HomeIcon } from "@ctrlup/rainbow-react";
 
-function NavigationMenu({ toggle }: NavigationMenuProps) {
+function NavigationMenu({ toggle }: { toggle?: () => void }) {
   return (
     <List>
       {routes.map((route) => (
@@ -46,14 +46,6 @@ type Route = {
   path: string;
   name: string;
   Icon: React.ElementType;
-};
-
-type NavigationMenuProps = {
-  toggle: () => void;
-};
-
-NavigationMenu.defaultProps = {
-  toggle: Function.prototype,
 };
 
 export default NavigationMenu;
