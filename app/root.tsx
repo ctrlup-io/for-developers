@@ -30,12 +30,17 @@ export function meta() {
   return { title: "Ctrl Up, une ESN régulière" };
 }
 
-
 const Document = withEmotionCache(
-  ({ children, title }: {
-    children: ReactNode;
-    title?: string;
-  }, emotionCache) => {
+  (
+    {
+      children,
+      title,
+    }: {
+      children: ReactNode;
+      title?: string;
+    },
+    emotionCache
+  ) => {
     const serverStyleData = useContext(ServerStyleContext);
     const clientStyleData = useContext(ClientStyleContext);
 

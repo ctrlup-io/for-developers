@@ -12,7 +12,7 @@ export default function Index() {
   return (
     <>
       <Typography variant="h5">Ctrl Up, une ESN régulière.</Typography>
-      <Typography variant="h1" mb={2}>
+      <Typography variant="h1" mb={4}>
         Forge tes aptitudes de{" "}
         <Typography
           sx={{
@@ -31,13 +31,12 @@ export default function Index() {
       <Box
         width="100%"
         height="auto"
-        mt={2}
-        mb={2}
+        mb={4}
         component="img"
         src="https://picsum.photos/seed/picsum/536/354"
         alt="random"
       />
-      <Typography mt={2} mb={2}>
+      <Typography mb={4}>
         Apporte de la valeur à ton rôle de développeur, prend de la hauteur dans
         le métier et grimpe en équipe. Notre crédo ? Échanger et partager pour
         évoluer ensemble.
