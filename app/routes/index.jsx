@@ -11,20 +11,8 @@ export function meta() {
 export default function Index() {
   return (
     <>
-      <Typography
-        variant="h5"
-        sx={{
-          marginTop: (theme) => theme.spacing(4),
-        }}
-      >
-        Ctrl Up, une ESN régulière.
-      </Typography>
-      <Typography
-        variant="h1"
-        sx={{
-          marginBottom: (theme) => theme.spacing(2),
-        }}
-      >
+      <Typography variant="h5">Ctrl Up, une ESN régulière.</Typography>
+      <Typography variant="h1" mb={2}>
         Forge tes aptitudes de{" "}
         <Typography
           sx={{
@@ -41,22 +29,15 @@ export default function Index() {
         </Typography>
       </Typography>
       <Box
-        sx={{
-          width: "100%",
-          height: "auto",
-          marginTop: (theme) => theme.spacing(2),
-          marginBottom: (theme) => theme.spacing(2),
-        }}
+        width="100%"
+        height="auto"
+        mt={2}
+        mb={2}
         component="img"
         src="https://picsum.photos/seed/picsum/536/354"
         alt="random"
       />
-      <Typography
-        sx={{
-          marginTop: (theme) => theme.spacing(2),
-          marginBottom: (theme) => theme.spacing(2),
-        }}
-      >
+      <Typography mt={2} mb={2}>
         Apporte de la valeur à ton rôle de développeur, prend de la hauteur dans
         le métier et grimpe en équipe. Notre crédo ? Échanger et partager pour
         évoluer ensemble.
@@ -68,7 +49,7 @@ export default function Index() {
         component={Link}
         to="/contact"
         sx={{
-          marginTop: (theme) => theme.spacing(2),
+          mt: 2,
         }}
       >
         Contactez-nous
