@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/ctrlup-io/for-developers/compare/v1.3.0...v1.3.1) (2022-03-16)
+
+
+### Bug Fixes
+
+* 🐛 space between burger menu button and title ([020f9df](https://github.com/ctrlup-io/for-developers/commit/020f9dfcd944d5e859c1d5884664e84bdfb33971))
+
 # [1.3.0](https://github.com/ctrlup-io/for-developers/compare/v1.2.0...v1.3.0) (2022-03-16)
 
 
