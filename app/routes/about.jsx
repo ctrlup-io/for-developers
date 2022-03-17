@@ -26,7 +26,7 @@ export default function About() {
         component="img"
         loading="lazy"
         src="https://picsum.photos/seed/picsum/536/354"
-        alt="random"
+        alt="mountain-landscape"
         mb={8}
       />
       <Typography mb={8}>
@@ -48,7 +48,7 @@ export default function About() {
           "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/Rectangle%20163.png?alt=media&token=6b5f0be8-e044-4ccb-937f-e75e1b1c6ba7",
         ].map((img) => (
           <ImageListItem key={img}>
-            <img src={img} alt="random" loading="lazy" />
+            <img src={img} alt="profile" loading="lazy" />
           </ImageListItem>
         ))}
       </ImageList>
@@ -67,7 +67,7 @@ export default function About() {
         component="img"
         loading="lazy"
         src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/Frame%20128.png?alt=media&token=13965644-af7b-4d8e-8353-b97aabbf9db7"
-        alt="random"
+        alt="crest-path"
       />
       <Typography variant="h1" mb={2}>
         Humaniser le développement en régie
@@ -86,7 +86,7 @@ export default function About() {
         component="img"
         loading="lazy"
         src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/06%201.png?alt=media&token=d983ecd7-6c95-40ef-8617-b4a5bf01a4c3"
-        alt="random"
+        alt="team-on-summit"
       />
       <Typography variant="h1" mb={2}>
         Valeurs fortes et convictions assurées

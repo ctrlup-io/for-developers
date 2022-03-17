@@ -34,7 +34,7 @@ export default function Index() {
         mb={4}
         component="img"
         src="https://picsum.photos/seed/picsum/536/354"
-        alt="random"
+        alt="mountain-landscape"
       />
       <Typography mb={4}>
         Apporte de la valeur à ton rôle de développeur, prend de la hauteur dans

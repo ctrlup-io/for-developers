@@ -101,7 +101,7 @@ export default function About() {
         component="img"
         loading="lazy"
         src="https://picsum.photos/seed/picsum/536/354"
-        alt="random"
+        alt="mountain-landscape"
       />
       <CollapseCard title="Aventure humaine" sx={{ mb: 2 }}>
         <Typography>
