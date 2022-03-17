@@ -23,7 +23,7 @@ export function meta() {
 export default function About() {
   return (
     <>
-      <Typography variant="h1" mb={4}>
+      <Typography variant="h2" mb={4}>
         On sait faire, et on le fait bien
       </Typography>
       <Typography mb={8}>
@@ -80,7 +80,7 @@ export default function About() {
           collaborateurs et profiter d'un esprit de famille.
         </Typography>
       </StepCard>
-      <Typography variant="h1" mb={2}>
+      <Typography variant="h2" mb={2}>
         Des avantages pour grimper plus haut{" "}
       </Typography>
       <Typography mb={8}>
@@ -117,7 +117,7 @@ export default function About() {
           Ullamcorper quam odio a quam in.
         </Typography>
       </CollapseCard>
-      <CollapseCard title="Progression rapide" sx={{ mb: 2 }}>
+      <CollapseCard title="Progression rapide" sx={{ mb: 4 }}>
         <Typography>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
           senectus pellentesque quam sed tellus, sapien non, scelerisque.

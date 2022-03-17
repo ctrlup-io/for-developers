@@ -17,7 +17,7 @@ export default function Contact() {
   const data = useLoaderData();
   return (
     <>
-      <Typography variant="h1" mb={2}>
+      <Typography variant="h2" mb={4}>
         Communiquons
       </Typography>
       <Typography mb={2}>

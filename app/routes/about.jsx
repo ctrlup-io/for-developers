@@ -17,7 +17,7 @@ export function meta() {
 export default function About() {
   return (
     <>
-      <Typography variant="h1" mb={4}>
+      <Typography variant="h2" mb={4}>
         Une histoire d’humains
       </Typography>
       <Box
@@ -69,7 +69,7 @@ export default function About() {
         src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/Frame%20128.png?alt=media&token=13965644-af7b-4d8e-8353-b97aabbf9db7"
         alt="crest-path"
       />
-      <Typography variant="h1" mb={2}>
+      <Typography variant="h2" mb={2}>
         Humaniser le développement en régie
       </Typography>
       <Typography mb={8}>
@@ -88,7 +88,7 @@ export default function About() {
         src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/06%201.png?alt=media&token=d983ecd7-6c95-40ef-8617-b4a5bf01a4c3"
         alt="team-on-summit"
       />
-      <Typography variant="h1" mb={2}>
+      <Typography variant="h2" mb={2}>
         Valeurs fortes et convictions assurées
       </Typography>
       <Typography mb={8}>
@@ -124,7 +124,7 @@ export default function About() {
           constante.
         </Typography>
       </CollapseCard>
-      <CollapseCard title="Partage" sx={{ mb: 2 }}>
+      <CollapseCard title="Partage" sx={{ mb: 4 }}>
         <Typography>
           La générosité dans le savoir permet à tous de grandir, c'est l'essence
           même d'internet. Les projets Open Source et les conférences sont notre
