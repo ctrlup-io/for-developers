@@ -11,7 +11,7 @@ export function meta() {
 export default function Index() {
   return (
     <>
-      <Typography variant="h5">Ctrl Up, une ESN régulière.</Typography>
+      <Typography variant="h5">Ctrl Up, une ESN singulière.</Typography>
       <Typography variant="h1" mb={4}>
         Forge tes aptitudes de{" "}
         <Typography
