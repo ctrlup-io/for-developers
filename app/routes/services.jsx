@@ -13,6 +13,7 @@ import ShoePrintsIcon from "../components/ShoePrintsIcon";
 import HikingIcon from "../components/HikingIcon";
 import SignatureIcon from "../components/SignatureIcon";
 import SignIcon from "../components/SignIcon";
+import Title from "~/components/Title";
 
 export function meta() {
   return {
@@ -23,9 +24,7 @@ export function meta() {
 export default function About() {
   return (
     <>
-      <Typography variant="h2" mb={4}>
-        On sait faire, et on le fait bien
-      </Typography>
+      <Title label="On sait faire, et on le fait bien" stainIndex={1} />
       <Typography mb={4}>
         Au même titre que les ESN, mais en beaucoup mieux, nous apportons
         plusieurs choses aux développeurs de la communauté. D'abord, Ctrl Up
