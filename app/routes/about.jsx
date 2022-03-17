@@ -8,6 +8,8 @@ import {
 import { Link } from "remix";
 import { CollapseCard } from "@ctrlup/rainbow-react";
 
+import Title from "../components/Title";
+
 export function meta() {
   return {
     title: "À propos",
@@ -17,9 +19,7 @@ export function meta() {
 export default function About() {
   return (
     <>
-      <Typography variant="h2" mb={4}>
-        Une histoire d’humains
-      </Typography>
+      <Title label="Une histoire d’humains" />
       <Box
         width="100%"
         height="auto"
