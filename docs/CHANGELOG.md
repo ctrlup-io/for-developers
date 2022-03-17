@@ -1,3 +1,12 @@
+## [1.3.2](https://github.com/ctrlup-io/for-developers/compare/v1.3.1...v1.3.2) (2022-03-17)
+
+
+### Bug Fixes
+
+* 🐛 "singulière" iso "régulière" to define Ctrl Up ([46fe44b](https://github.com/ctrlup-io/for-developers/commit/46fe44b886e121bf2ba2cbce94da57968dcf9430))
+* 🐛 define `alt` property on images ([6975561](https://github.com/ctrlup-io/for-developers/commit/6975561a09109c5ff4aa41a617b0df8550c2474d))
+* 🐛 transform h1 into h2 on secondary pages ([66ed0b7](https://github.com/ctrlup-io/for-developers/commit/66ed0b7c70dc049941284984b2be2283bb029f66))
+
 ## [1.3.1](https://github.com/ctrlup-io/for-developers/compare/v1.3.0...v1.3.1) (2022-03-16)
 
 
