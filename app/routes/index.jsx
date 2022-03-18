@@ -47,9 +47,6 @@ export default function Index() {
         fullWidth
         component={Link}
         to="/contact"
-        sx={{
-          mt: 2,
-        }}
       >
         Contactez-nous
       </Button>
