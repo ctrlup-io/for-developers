@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/ctrlup-io/for-developers/compare/v1.3.3...v1.3.4) (2022-03-18)
+
+
+### Bug Fixes
+
+* 🐛 sync element hierarchy and margin ([57ee207](https://github.com/ctrlup-io/for-developers/commit/57ee207ff75dab3d55cab5b9d28b392c77698ed0))
+
 ## [1.3.3](https://github.com/ctrlup-io/for-developers/compare/v1.3.2...v1.3.3) (2022-03-18)
 
 
