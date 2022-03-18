@@ -27,9 +27,9 @@ export default function About() {
         loading="lazy"
         src="https://picsum.photos/seed/picsum/536/354"
         alt="mountain-landscape"
-        mb={8}
+        mb={4}
       />
-      <Typography mb={8}>
+      <Typography mb={4}>
         En 2018, Kevin bosse dans une ESN et fait un constat inquiétant. Dans
         son entreprise, le manque de développeurs se fait sentir. Difficile
         d'attirer de nouveau talents, les projets ralentissent. Il faut trouver
@@ -42,7 +42,7 @@ export default function About() {
         empathique, il comprend peu à peu que beaucoup de développeurs sont
         frustrés voir épuisés.
       </Typography>
-      <ImageList cols={2} gap={16} sx={{ mt: 0, mb: 8 }}>
+      <ImageList cols={2} gap={16} sx={{ mt: 0, mb: 4 }}>
         {[
           "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/Rectangle%20164.png?alt=media&token=1cd10d30-772b-4247-af1a-f954cc036b64",
           "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/Rectangle%20163.png?alt=media&token=6b5f0be8-e044-4ccb-937f-e75e1b1c6ba7",
@@ -52,7 +52,7 @@ export default function About() {
           </ImageListItem>
         ))}
       </ImageList>
-      <Typography mb={8}>
+      <Typography mb={4}>
         Autour d'une discussion, les deux amis explorent les raisons qui
         démontrent les limites des ESN à grande échelle : solitude, manque de
         reconnaissance, missions inadaptées, stagnation des compétences, manque
@@ -69,10 +69,10 @@ export default function About() {
         src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/Frame%20128.png?alt=media&token=13965644-af7b-4d8e-8353-b97aabbf9db7"
         alt="crest-path"
       />
-      <Typography variant="h2" mb={2}>
+      <Typography variant="h2" mb={4}>
         Humaniser le développement en régie
       </Typography>
-      <Typography mb={8}>
+      <Typography mb={4}>
         L'idée est de trouver un modèle différent, innover pour améliorer le
         quotidien des développeurs. La solution est simple, c'est en renforçant
         le lien humain qu'ils en tireront une nouvelle force : celle d'être
@@ -88,10 +88,10 @@ export default function About() {
         src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/06%201.png?alt=media&token=d983ecd7-6c95-40ef-8617-b4a5bf01a4c3"
         alt="team-on-summit"
       />
-      <Typography variant="h2" mb={2}>
+      <Typography variant="h2" mb={4}>
         Valeurs fortes et convictions assurées
       </Typography>
-      <Typography mb={8}>
+      <Typography mb={4}>
         C'est parce que nous sommes nous-même empathiques et bienveillants qu'on
         y croit fermement. C'est en répandant des ondes positives de partage et
         de transmission que nous pouvons tous évoluer, constamment.
@@ -124,7 +124,7 @@ export default function About() {
           constante.
         </Typography>
       </CollapseCard>
-      <CollapseCard title="Partage" sx={{ mb: 4 }}>
+      <CollapseCard title="Partage" sx={{ mb: 8 }}>
         <Typography>
           La générosité dans le savoir permet à tous de grandir, c'est l'essence
           même d'internet. Les projets Open Source et les conférences sont notre

@@ -26,7 +26,7 @@ export default function About() {
       <Typography variant="h2" mb={4}>
         On sait faire, et on le fait bien
       </Typography>
-      <Typography mb={8}>
+      <Typography mb={4}>
         Au même titre que les ESN, mais en beaucoup mieux, nous apportons
         plusieurs choses aux développeurs de la communauté. D'abord, Ctrl Up
         propose un modèle fondé sur quatre étapes, de l'arrivée d'un développeur
@@ -80,10 +80,10 @@ export default function About() {
           collaborateurs et profiter d'un esprit de famille.
         </Typography>
       </StepCard>
-      <Typography variant="h2" mb={2}>
+      <Typography variant="h2" mb={4}>
         Des avantages pour grimper plus haut{" "}
       </Typography>
-      <Typography mb={8}>
+      <Typography mb={4}>
         Notre méthode permet aux membres de progresser rapidement, surtout quand
         on débute sa carrière ou qu'on essaie d'acquérir le statut de senior.
         Les valeurs de polyvalence et d'ouverture que nous transmettons sont
@@ -97,7 +97,7 @@ export default function About() {
       <Box
         width="100%"
         height="auto"
-        mb={8}
+        mb={4}
         component="img"
         loading="lazy"
         src="https://picsum.photos/seed/picsum/536/354"
@@ -110,14 +110,21 @@ export default function About() {
           Ullamcorper quam odio a quam in.
         </Typography>
       </CollapseCard>
-      <CollapseCard title="Réseau consolidé" sx={{ mb: 2 }}>
+      <CollapseCard title="Progression rapide" sx={{ mb: 2 }}>
         <Typography>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
           senectus pellentesque quam sed tellus, sapien non, scelerisque.
           Ullamcorper quam odio a quam in.
         </Typography>
       </CollapseCard>
-      <CollapseCard title="Progression rapide" sx={{ mb: 4 }}>
+      <CollapseCard title="Mission adéquate" sx={{ mb: 2 }}>
+        <Typography>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+          senectus pellentesque quam sed tellus, sapien non, scelerisque.
+          Ullamcorper quam odio a quam in.
+        </Typography>
+      </CollapseCard>
+      <CollapseCard title="Réseau consolidé" sx={{ mb: 8 }}>
         <Typography>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
           senectus pellentesque quam sed tellus, sapien non, scelerisque.
