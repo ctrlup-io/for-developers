@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/ctrlup-io/for-developers/compare/v1.3.4...v1.3.5) (2022-03-25)
+
+
+### Bug Fixes
+
+* 🐛 use Rainbow svg linear gradient from design system ([75556ad](https://github.com/ctrlup-io/for-developers/commit/75556adcbe3c553f8d6b093dfa3d786757e0b82f))
+
 ## [1.3.4](https://github.com/ctrlup-io/for-developers/compare/v1.3.3...v1.3.4) (2022-03-18)
 
 
