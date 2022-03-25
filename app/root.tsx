@@ -16,12 +16,11 @@ import {
   ThemeProvider as EmotionThemeProvider,
   withEmotionCache,
 } from "@emotion/react";
-import { theme } from "@ctrlup/rainbow-react";
+import { theme, Rainbow } from "@ctrlup/rainbow-react";
 import { CssBaseline, ThemeOptions, Container, Alert } from "@mui/material";
 
 import ServerStyleContext from "./styles/server.context";
 import ClientStyleContext from "./styles/client.context";
-import RainbowSvg from "./components/Rainbow";
 import HideAppBar from "./components/HideAppBar";
 
 const muiTheme = createTheme(theme as ThemeOptions);
@@ -85,10 +84,10 @@ const Document = withEmotionCache(
         </head>
         <body>
           {children}
+          <Rainbow />
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
-          <RainbowSvg />
         </body>
       </html>
     );
