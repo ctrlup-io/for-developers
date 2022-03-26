@@ -62,7 +62,7 @@
     ]
   },
   "dependencies": {
-    "@ctrlup/rainbow-react": "^1.1.5",
+    "@ctrlup/rainbow-react": "^1.2.1",
     "@emotion/cache": "^11.7.1",
     "@emotion/react": "^11.8.1",
     "@emotion/server": "^11.4.0",
