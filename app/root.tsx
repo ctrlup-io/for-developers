@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
+  useMatches,
 } from "remix";
 import { ReactNode, useContext, useEffect } from "react";
 import { createTheme } from "@mui/material/styles";
@@ -16,6 +17,7 @@ import { ThemeOptions, Container, Alert } from "@mui/material";
 import ServerStyleContext from "./styles/server.context";
 import ClientStyleContext from "./styles/client.context";
 import HideAppBar from "./components/HideAppBar";
+import Footer from "./components/Footer";
 
 const muiTheme = createTheme(theme as ThemeOptions);
 
@@ -88,19 +90,22 @@ const Document = withEmotionCache(
 );
 
 export default function App() {
+  const matches = useMatches();
+  const isIndex = matches.some((match) => match.id === "routes/index");
   return (
     <Document>
       <ThemeProvider theme={muiTheme}>
-          <HideAppBar />
-          <Container
-            component="main"
-            sx={{
-              mt: 10,
-              mb: 8,
-            }}
-          >
-            <Outlet />
-          </Container>
+        <HideAppBar />
+        <Container
+          component="main"
+          sx={{
+            mt: 10,
+            mb: 16,
+          }}
+        >
+          <Outlet />
+        </Container>
+        {!isIndex && <Footer />}
       </ThemeProvider>
     </Document>
   );

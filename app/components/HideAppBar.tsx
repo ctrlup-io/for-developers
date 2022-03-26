@@ -68,7 +68,7 @@ export default function HideAppBar() {
       >
         <Toolbar />
         <Box overflow="auto">
-          <NavigationMenu toggle={toggleDrawer} />
+          <NavigationMenu onNavigate={toggleDrawer} />
         </Box>
       </Drawer>
     </>

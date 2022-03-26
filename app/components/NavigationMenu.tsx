@@ -1,16 +1,22 @@
 import React from "react";
-import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import {
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import { NavLink } from "remix";
 import {
   AboutIcon,
+  colors,
   ContactIcon,
   HomeIcon,
   ServiceIcon,
 } from "@ctrlup/rainbow-react";
 
-function NavigationMenu({ toggle }: { toggle?: () => void }) {
+function NavigationMenu({ onNavigate }: { onNavigate?: () => void }) {
   return (
-    <List>
+    <List disablePadding>
       {routes.map((route) => (
         <NavLink
           key={route.name}
@@ -18,23 +24,31 @@ function NavigationMenu({ toggle }: { toggle?: () => void }) {
           style={{
             textDecoration: "none",
           }}
-          onClick={toggle}
+          onClick={onNavigate}
         >
           {({ isActive }) => (
-            <ListItem button>
+            <ListItemButton
+              sx={{
+                background: route.primary && colors.RAINBOW,
+              }}
+            >
               <ListItemIcon>
                 <route.Icon
-                  color={isActive ? "action" : "default"}
+                  color={isActive && !route.primary ? "action" : "default"}
                   fontSize="small"
                 />
               </ListItemIcon>
               <ListItemText
                 primary={route.name}
                 primaryTypographyProps={{
-                  color: isActive ? "textPrimary" : "textSecondary",
+                  color: route.primary
+                    ? "common.black"
+                    : isActive
+                    ? "textPrimary"
+                    : "textSecondary",
                 }}
               />
-            </ListItem>
+            </ListItemButton>
           )}
         </NavLink>
       ))}
@@ -46,13 +60,14 @@ export const routes: Route[] = [
   { path: "/", name: "Accueil", Icon: HomeIcon },
   { path: "/about", name: "À propos", Icon: AboutIcon },
   { path: "/services", name: "Services", Icon: ServiceIcon },
-  { path: "/contact", name: "Contact", Icon: ContactIcon },
+  { path: "/contact", name: "Contact", Icon: ContactIcon, primary: true },
 ];
 
 type Route = {
   path: string;
   name: string;
   Icon: React.ElementType;
+  primary?: boolean;
 };
 
 export default NavigationMenu;
