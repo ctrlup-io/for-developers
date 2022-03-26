@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/ctrlup-io/for-developers/compare/v1.3.5...v1.4.0) (2022-03-26)
+
+
+### Bug Fixes
+
+* 🐛 use ThemeProvider from @ctrlup/rainbow-react ([2b01f2c](https://github.com/ctrlup-io/for-developers/commit/2b01f2cbd5a4bf6a8e0d60165b1853056d033b8b))
+
+
+### Features
+
+* 🎸 footer everywhere except home ([a2b6e73](https://github.com/ctrlup-io/for-developers/commit/a2b6e735aa89b766fcf762f5d542c17b3d35e209))
+
 ## [1.3.5](https://github.com/ctrlup-io/for-developers/compare/v1.3.4...v1.3.5) (2022-03-25)
 
 
