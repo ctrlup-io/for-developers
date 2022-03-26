@@ -1,8 +1,12 @@
 {
   "name": "for-developers",
+  "version": "0.1.0",
   "private": true,
   "description": "",
-  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ctrlup-io/for-developers"
+  },
   "license": "",
   "sideEffects": false,
   "scripts": {
@@ -61,6 +65,10 @@
       ]
     ]
   },
+  "resolutions": {
+    "minimist": "^1.2.6",
+    "trim-newlines": "^3.0.1"
+  },
   "dependencies": {
     "@ctrlup/rainbow-react": "^1.2.1",
     "@emotion/cache": "^11.7.1",
@@ -96,9 +104,5 @@
   },
   "engines": {
     "node": ">=14"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ctrlup-io/for-developers"
   }
 }
