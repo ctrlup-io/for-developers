@@ -8,16 +8,10 @@ import {
   useCatch,
 } from "remix";
 import { ReactNode, useContext, useEffect } from "react";
-import {
-  createTheme,
-  ThemeProvider as MuiThemeProvider,
-} from "@mui/material/styles";
-import {
-  ThemeProvider as EmotionThemeProvider,
-  withEmotionCache,
-} from "@emotion/react";
-import { theme, Rainbow } from "@ctrlup/rainbow-react";
-import { CssBaseline, ThemeOptions, Container, Alert } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+import { withEmotionCache } from "@emotion/react";
+import { theme, ThemeProvider } from "@ctrlup/rainbow-react";
+import { ThemeOptions, Container, Alert } from "@mui/material";
 
 import ServerStyleContext from "./styles/server.context";
 import ClientStyleContext from "./styles/client.context";
@@ -84,7 +78,6 @@ const Document = withEmotionCache(
         </head>
         <body>
           {children}
-          <Rainbow />
           <ScrollRestoration />
           <Scripts />
           <LiveReload />
@@ -97,9 +90,7 @@ const Document = withEmotionCache(
 export default function App() {
   return (
     <Document>
-      <EmotionThemeProvider theme={muiTheme}>
-        <MuiThemeProvider theme={muiTheme}>
-          <CssBaseline />
+      <ThemeProvider theme={muiTheme}>
           <HideAppBar />
           <Container
             component="main"
@@ -110,8 +101,7 @@ export default function App() {
           >
             <Outlet />
           </Container>
-        </MuiThemeProvider>
-      </EmotionThemeProvider>
+      </ThemeProvider>
     </Document>
   );
 }
