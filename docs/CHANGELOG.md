@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/ctrlup-io/for-developers/compare/v1.4.0...v1.5.0) (2022-03-26)
+
+
+### Features
+
+* 🎸 title with rainbow stain ([b7360b7](https://github.com/ctrlup-io/for-developers/commit/b7360b78339a56606e34b32e75c99c53249b2bce))
+
 # [1.4.0](https://github.com/ctrlup-io/for-developers/compare/v1.3.5...v1.4.0) (2022-03-26)
 
 
