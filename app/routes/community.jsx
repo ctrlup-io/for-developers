@@ -121,9 +121,19 @@ export default function Community() {
         fullWidth
         component={Link}
         to="/blog"
+        sx={{ mb: 8 }}
       >
         Visitez notre blog
       </Button>
+      <Box
+        width="100%"
+        height="auto"
+        mb={8}
+        component="img"
+        loading="lazy"
+        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/04%201.png?alt=media&token=6a7fdf51-e76b-46f5-bc15-6ac316fddaa8"
+        alt="team gathering"
+      />
     </>
   );
 }
