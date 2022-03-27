@@ -13,7 +13,7 @@ import ShoePrintsIcon from "../components/ShoePrintsIcon";
 import HikingIcon from "../components/HikingIcon";
 import SignatureIcon from "../components/SignatureIcon";
 import SignIcon from "../components/SignIcon";
-import Title from "~/components/Title";
+import Title from "../components/Title";
 
 export function meta() {
   return {
