@@ -49,6 +49,7 @@ function Footer() {
 const links: Route[] = [
   { path: "/about", name: "À propos" },
   { path: "/services", name: "Services" },
+  { path: "/team", name: "Équipe" },
   { path: "/contact", name: "Contact", primary: true },
 ];
 

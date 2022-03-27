@@ -13,6 +13,7 @@ import {
   ContactIcon,
   HomeIcon,
   ServiceIcon,
+  TeamIcon,
 } from "@ctrlup/rainbow-react";
 
 function NavigationMenu({ onNavigate }: { onNavigate?: () => void }) {
@@ -64,6 +65,7 @@ export const routes: Route[] = [
   { path: "/about", name: "À propos", Icon: AboutIcon },
   { path: "/services", name: "Services", Icon: ServiceIcon },
   { path: "/community", name: "Communauté", Icon: CommunityIcon },
+  { path: "/team", name: "Équipe", Icon: TeamIcon },
   { path: "/contact", name: "Contact", Icon: ContactIcon, primary: true },
 ];
 
