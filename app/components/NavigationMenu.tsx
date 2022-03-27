@@ -12,6 +12,7 @@ import {
   CommunityIcon,
   ContactIcon,
   HomeIcon,
+  JobIcon,
   ServiceIcon,
   TeamIcon,
 } from "@ctrlup/rainbow-react";
@@ -66,6 +67,7 @@ export const routes: Route[] = [
   { path: "/services", name: "Services", Icon: ServiceIcon },
   { path: "/community", name: "Communauté", Icon: CommunityIcon },
   { path: "/team", name: "Équipe", Icon: TeamIcon },
+  { path: "/jobs", name: "Jobs", Icon: JobIcon },
   { path: "/contact", name: "Contact", Icon: ContactIcon, primary: true },
 ];
 
