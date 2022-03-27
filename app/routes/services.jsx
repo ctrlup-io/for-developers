@@ -21,7 +21,7 @@ export function meta() {
   };
 }
 
-export default function About() {
+export default function Services() {
   return (
     <>
       <Title label="On sait faire, et on le fait bien" stainIndex={1} />
