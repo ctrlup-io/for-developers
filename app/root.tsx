@@ -12,7 +12,7 @@ import { ReactNode, useContext, useEffect } from "react";
 import { createTheme } from "@mui/material/styles";
 import { withEmotionCache } from "@emotion/react";
 import { theme, ThemeProvider } from "@ctrlup/rainbow-react";
-import { ThemeOptions, Container, Alert } from "@mui/material";
+import { ThemeOptions, Container, Alert, Typography } from "@mui/material";
 
 import ServerStyleContext from "./styles/server.context";
 import ClientStyleContext from "./styles/client.context";
@@ -116,17 +116,32 @@ export function CatchBoundary() {
 
   return (
     <Document title={`${caught.status} ${caught.statusText}`}>
-      <Container
-        component="main"
-        sx={{
-          mt: 2,
-          mb: 8,
-        }}
-      >
-        <Alert severity="error">
-          [CatchBoundary]: {caught.status} {caught.statusText}
-        </Alert>
-      </Container>
+      <ThemeProvider theme={muiTheme}>
+        <HideAppBar />
+        <Container
+          component="main"
+          sx={{
+            mt: 10,
+            mb: 16,
+          }}
+        >
+          {caught.status === 404 ? (
+            <>
+              <Typography variant="h2" mb={4}>
+                Oops
+              </Typography>
+              <Typography>
+                Il semble que la corde soit rompue... <br />
+                Vous subissez une erreur 404, le lien n’a pas été trouvé.
+              </Typography>
+            </>
+          ) : (
+            <Alert severity="error">
+              [CatchBoundary]: {caught.status} {caught.statusText}
+            </Alert>
+          )}
+        </Container>
+      </ThemeProvider>
     </Document>
   );
 }
@@ -137,8 +152,8 @@ export function ErrorBoundary({ error }: { error: Error }) {
       <Container
         component="main"
         sx={{
-          mt: 2,
-          mb: 8,
+          mt: 10,
+          mb: 16,
         }}
       >
         <Alert severity="error">
