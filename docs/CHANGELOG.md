@@ -1,3 +1,11 @@
+## [1.6.1](https://github.com/ctrlup-io/for-developers/compare/v1.6.0...v1.6.1) (2022-03-27)
+
+
+### Bug Fixes
+
+* 🐛 illustration on community page ([f5e122e](https://github.com/ctrlup-io/for-developers/commit/f5e122e9c1214a1aede4b12bf3dc84479d8a53e3))
+* 🐛 link to meetup events on community page ([47ff9e1](https://github.com/ctrlup-io/for-developers/commit/47ff9e169f53ca02ddae4c859b8650158c5601ad))
+
 # [1.6.0](https://github.com/ctrlup-io/for-developers/compare/v1.5.0...v1.6.0) (2022-03-27)
 
 
