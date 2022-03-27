@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/ctrlup-io/for-developers/compare/v1.6.1...v1.7.0) (2022-03-27)
+
+
+### Features
+
+* 🎸 team page ([e4b575d](https://github.com/ctrlup-io/for-developers/commit/e4b575dacc05015f63372cabb08f08939585c9b0))
+
 ## [1.6.1](https://github.com/ctrlup-io/for-developers/compare/v1.6.0...v1.6.1) (2022-03-27)
 
 
