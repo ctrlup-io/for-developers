@@ -32,12 +32,14 @@ function NavigationMenu({ onNavigate }: { onNavigate?: () => void }) {
                 background: route.primary && colors.RAINBOW,
               }}
             >
-              <ListItemIcon>
-                <route.Icon
-                  color={isActive && !route.primary ? "action" : "default"}
-                  fontSize="small"
-                />
-              </ListItemIcon>
+              {route.Icon && (
+                <ListItemIcon>
+                  <route.Icon
+                    color={isActive && !route.primary ? "action" : "default"}
+                    fontSize="small"
+                  />
+                </ListItemIcon>
+              )}
               <ListItemText
                 primary={route.name}
                 primaryTypographyProps={{
@@ -63,10 +65,10 @@ export const routes: Route[] = [
   { path: "/contact", name: "Contact", Icon: ContactIcon, primary: true },
 ];
 
-type Route = {
+export type Route = {
   path: string;
   name: string;
-  Icon: React.ElementType;
+  Icon?: React.ElementType;
   primary?: boolean;
 };
 

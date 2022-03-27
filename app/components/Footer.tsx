@@ -2,6 +2,7 @@ import React from "react";
 import { Box, List, ListItemButton, ListItemText } from "@mui/material";
 import { NavLink } from "remix";
 import { colors } from "@ctrlup/rainbow-react";
+import { Route } from "./NavigationMenu";
 
 function Footer() {
   return (
@@ -45,16 +46,10 @@ function Footer() {
   );
 }
 
-const links: Link[] = [
+const links: Route[] = [
   { path: "/about", name: "À propos" },
   { path: "/services", name: "Services" },
   { path: "/contact", name: "Contact", primary: true },
 ];
-
-type Link = {
-  path: string;
-  name: string;
-  primary?: boolean;
-};
 
 export default Footer;
