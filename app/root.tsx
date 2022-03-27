@@ -97,6 +97,7 @@ export default function App() {
       <ThemeProvider theme={muiTheme}>
         <HideAppBar />
         <Container
+          maxWidth="xs"
           component="main"
           sx={{
             mt: 10,
@@ -119,6 +120,7 @@ export function CatchBoundary() {
       <ThemeProvider theme={muiTheme}>
         <HideAppBar />
         <Container
+          maxWidth="xs"
           component="main"
           sx={{
             mt: 10,
@@ -150,6 +152,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
   return (
     <Document title="Error!">
       <Container
+        maxWidth="xs"
         component="main"
         sx={{
           mt: 10,
