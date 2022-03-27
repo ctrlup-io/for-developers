@@ -9,6 +9,7 @@ import { NavLink } from "remix";
 import {
   AboutIcon,
   colors,
+  CommunityIcon,
   ContactIcon,
   HomeIcon,
   ServiceIcon,
@@ -62,6 +63,7 @@ export const routes: Route[] = [
   { path: "/", name: "Accueil", Icon: HomeIcon },
   { path: "/about", name: "À propos", Icon: AboutIcon },
   { path: "/services", name: "Services", Icon: ServiceIcon },
+  { path: "/community", name: "Communauté", Icon: CommunityIcon },
   { path: "/contact", name: "Contact", Icon: ContactIcon, primary: true },
 ];
 
