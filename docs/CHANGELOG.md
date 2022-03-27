@@ -1,3 +1,18 @@
+# [1.6.0](https://github.com/ctrlup-io/for-developers/compare/v1.5.0...v1.6.0) (2022-03-27)
+
+
+### Bug Fixes
+
+* 🐛 reduce container max. width ([ab6d54f](https://github.com/ctrlup-io/for-developers/commit/ab6d54f08acd6a558e1c37d4a1043df7e12674a2))
+
+
+### Features
+
+* 🎸 community nav link in drawer menu ([b97bed4](https://github.com/ctrlup-io/for-developers/commit/b97bed4e5e32fa6aff727e07a04562afacfab113))
+* 🎸 community page ([2345f78](https://github.com/ctrlup-io/for-developers/commit/2345f78092a28e0bbc24e030569241b712e5e691))
+* 🎸 new stain ([263c069](https://github.com/ctrlup-io/for-developers/commit/263c069e9b5a23ac90cf0b68c6c0f80d797e1e27))
+* 🎸 not found page ([9fbe3e2](https://github.com/ctrlup-io/for-developers/commit/9fbe3e292b3ed3db63aedbb6c7ed59a22873cb4a))
+
 # [1.5.0](https://github.com/ctrlup-io/for-developers/compare/v1.4.0...v1.5.0) (2022-03-26)
 
 
