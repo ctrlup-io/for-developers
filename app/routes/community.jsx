@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, Link as MuiLink } from "@mui/material";
 import { Link } from "remix";
 
 import Title from "../components/Title";
@@ -15,9 +15,16 @@ export default function Community() {
       <Title label="Être bien, être en lien" stainIndex={2} />
       <Typography mb={8}>
         On considère que le lien est primordial, et nous faisons tout pour
-        l'entretenir. Que ce soit dans la participation à des évènements ou dans
-        le partage de connaissances, nous pensons que l'équipe a besoin de se
-        réunir régulièrement pour échanger.
+        l'entretenir. Que ce soit dans la participation à des{" "}
+        <MuiLink
+          href="https://meetup.com/tech-ctrl/events/"
+          alt="events"
+          target="_blank"
+        >
+          évènements
+        </MuiLink>{" "}
+        ou dans le partage de connaissances, nous pensons que l'équipe a besoin
+        de se réunir régulièrement pour échanger.
       </Typography>
       <Box
         width="100%"
