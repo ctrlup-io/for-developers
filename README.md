@@ -53,7 +53,7 @@ In the project directory, you can run:
 ### **`start`**
 
 > ✅ **Prerequisites**  
-> Set [required environment variables](README.md#environment-variables): `GOOGLE_MAP_API_KEY` and `NODE_ENV`.
+> Set [required environment variables](README.md#environment-variables): `GOOGLE_MAP_API_KEY`, `FIREBASE_API_KEY`, `FIREBASE_APP_ID`, `FIREBASE_PROJECT_ID`, and `NODE_ENV`.
 
 Watches your application files and builds your app for development when files change.
 
@@ -100,3 +100,4 @@ cp .env.example .env
 - `GITHUB_TOKEN` to allow Semantic Release in [Dru-run mode](https://semantic-release.gitbook.io/semantic-release/usage/configuration#dryrun) to verify the repository push permission
 - `NODE_ENV` to `development` to take advantage of the Remix live reload functionality.
 - `GOOGLE_MAP_API_KEY` to use the [Maps Embed API](https://developers.google.com/maps/documentation/embed/get-started)
+- `FIREBASE_API_KEY`, `FIREBASE_APP_ID`, and `FIREBASE_PROJECT_ID` to fetch data from [Firebase](https://firebase.google.com/docs/reference/js)
