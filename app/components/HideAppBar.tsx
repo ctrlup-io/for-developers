@@ -50,7 +50,17 @@ export default function HideAppBar() {
                 }}
               />
             </IconButton>
-            <NavigationTitle />
+            <Box flexGrow={1} display="flex" alignItems="center">
+              <NavigationTitle />
+            </Box>
+            <Box
+              width={32}
+              height={32}
+              component="img"
+              loading="lazy"
+              src="favicon-32x32.png"
+              alt="ctrl up logo"
+            />
           </Toolbar>
         </AppBar>
       </HideOnScroll>
