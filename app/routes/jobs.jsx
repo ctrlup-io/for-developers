@@ -1,7 +1,25 @@
-import { Typography } from "@mui/material";
+import { Card } from "@ctrlup/rainbow-react";
+import { EmailOutlined } from "@mui/icons-material";
+import {
+  Button,
+  CardActions,
+  CardContent,
+  Chip,
+  Grid,
+  Stack,
+  Typography,
+} from "@mui/material";
+import {
+  collection,
+  getDocs,
+  orderBy,
+  query,
+  where,
+} from "firebase/firestore/lite";
 import { useLoaderData } from "remix";
 
 import Title from "../components/Title";
+import { db } from "../firebase";
 
 export function meta() {
   return {
@@ -9,8 +27,27 @@ export function meta() {
   };
 }
 
+function parse(snapshot) {
+  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+}
+
 export async function loader() {
-  return {};
+  const jobs = await getDocs(
+    query(
+      collection(db, "jobs"),
+      where("active", "==", true),
+      orderBy("createdAt", "desc")
+    )
+  );
+  const seniorityLevels = await getDocs(
+    query(collection(db, "seniorityLevels"))
+  );
+  const skills = await getDocs(query(collection(db, "skills")));
+  return {
+    jobs: parse(jobs),
+    seniorityLevels: parse(seniorityLevels),
+    skills: parse(skills),
+  };
 }
 
 export default function Jobs() {
@@ -22,6 +59,58 @@ export default function Jobs() {
         Retrouvez ici nos prises du mois : on s'efforce de chercher la crème des
         offres d'emplois pour éviter les usines à gaz.
       </Typography>
+      <Stack spacing={8}>
+        {data.jobs.map((job) => {
+          const experience = Object.values(data.seniorityLevels).reduce(
+            (acc, level) => Math.min(acc, level?.experience?.min || Infinity),
+            Infinity
+          );
+          const salary = Math.round(
+            Math.max(
+              ...job.seniorities.map(
+                (seniority) =>
+                  data.seniorityLevels.find((level) => level.id === seniority)
+                    ?.salary?.base
+              )
+            )
+          );
+          const skills = job.mainSkills
+            .map(
+              (mainSkill) =>
+                data.skills.find((skill) => skill.id === mainSkill)?.name
+            )
+            .filter(Boolean);
+          return (
+            <Card
+              key={job.id}
+              icon={<EmailOutlined color="action" />}
+              title={job.title}
+            >
+              <CardContent sx={{ pt: 2 }}>
+                <Grid container spacing={1} mb={1}>
+                  <Grid item>
+                    <Chip label={`${experience} xp`} />
+                  </Grid>
+                  <Grid item>
+                    <Chip label={`${salary} k€`} />
+                  </Grid>
+                </Grid>
+                <Grid container spacing={1} mb={1}>
+                  {skills.map((skill) => (
+                    <Grid item key={skill}>
+                      <Chip label={skill} variant="outlined" />
+                    </Grid>
+                  ))}
+                </Grid>
+                <Typography>{job.description}</Typography>
+              </CardContent>
+              <CardActions>
+                <Button variant="outlined">Lire plus...</Button>
+              </CardActions>
+            </Card>
+          );
+        })}
+      </Stack>
     </>
   );
 }
