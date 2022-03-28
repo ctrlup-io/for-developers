@@ -1,3 +1,16 @@
+# [1.8.0](https://github.com/ctrlup-io/for-developers/compare/v1.7.0...v1.8.0) (2022-03-28)
+
+
+### Features
+
+* 🎸 add jobs route ([9a7b247](https://github.com/ctrlup-io/for-developers/commit/9a7b247d1bc5ebfdace2a2939b98366cb8883e20))
+* 🎸 jobs link in drawer and footer navs ([3ff259c](https://github.com/ctrlup-io/for-developers/commit/3ff259c13d0f00546e9be5f0540da8f4401413ab))
+* 🎸 jobs page ([c980ff9](https://github.com/ctrlup-io/for-developers/commit/c980ff910746a3e2343e38829ec138eb585e17cf))
+* 🎸 logo in the header ([06549f5](https://github.com/ctrlup-io/for-developers/commit/06549f57b8409cc00b466e733ae35d572d2bc762))
+* 🎸 new favicon ([f0308be](https://github.com/ctrlup-io/for-developers/commit/f0308be1ca70b5243dc6e88fdac85308431b0fd5))
+* 🎸 new stain ([b4901ef](https://github.com/ctrlup-io/for-developers/commit/b4901efac3aeab71b73205f1f5e0b88dc12551ae))
+* 🎸 use firebase ([7c8b0b6](https://github.com/ctrlup-io/for-developers/commit/7c8b0b65744c80e7bd19e8119cdc961e6562595f))
+
 # [1.7.0](https://github.com/ctrlup-io/for-developers/compare/v1.6.1...v1.7.0) (2022-03-27)
 
 
