@@ -1,14 +1,4 @@
-import { Card } from "@ctrlup/rainbow-react";
-import { EmailOutlined } from "@mui/icons-material";
-import {
-  Button,
-  CardActions,
-  CardContent,
-  Chip,
-  Grid,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import {
   collection,
   getDocs,
@@ -18,6 +8,7 @@ import {
 } from "firebase/firestore/lite";
 import { useLoaderData } from "remix";
 
+import Job from "../components/Job";
 import Title from "../components/Title";
 import { db } from "../firebase";
 
@@ -81,33 +72,14 @@ export default function Jobs() {
             )
             .filter(Boolean);
           return (
-            <Card
+            <Job
               key={job.id}
-              icon={<EmailOutlined color="action" />}
               title={job.title}
-            >
-              <CardContent sx={{ pt: 2 }}>
-                <Grid container spacing={1} mb={1}>
-                  <Grid item>
-                    <Chip label={`${experience} xp`} />
-                  </Grid>
-                  <Grid item>
-                    <Chip label={`${salary} k€`} />
-                  </Grid>
-                </Grid>
-                <Grid container spacing={1} mb={1}>
-                  {skills.map((skill) => (
-                    <Grid item key={skill}>
-                      <Chip label={skill} variant="outlined" />
-                    </Grid>
-                  ))}
-                </Grid>
-                <Typography>{job.description}</Typography>
-              </CardContent>
-              <CardActions>
-                <Button variant="outlined">Lire plus...</Button>
-              </CardActions>
-            </Card>
+              description={job.description}
+              skills={skills}
+              experience={experience}
+              salary={salary}
+            />
           );
         })}
       </Stack>
