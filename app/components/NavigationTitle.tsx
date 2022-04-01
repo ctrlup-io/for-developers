@@ -1,18 +1,30 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import { useLocation } from "react-router";
+import { useNavigate } from "remix";
+import { ArrowBack } from "@mui/icons-material";
 
 import { routes } from "./NavigationMenu";
 
 function NavigationTitle() {
+  const navigate = useNavigate();
   const location = useLocation();
   const matches = routes.filter((route) => location.pathname.match(route.path));
   const route = matches[matches.length - 1];
+  const isRoot = route.path === location.pathname;
+  const onBack = () => {
+    navigate(-1);
+  };
   if (!route) return null;
   return (
     <>
       <route.Icon color="action" fontSize="small" sx={{ mr: 2 }} />
       <Typography variant="h4">{route.name}</Typography>
+      {!isRoot && (
+        <IconButton onClick={onBack}>
+          <ArrowBack />
+        </IconButton>
+      )}
     </>
   );
 }
