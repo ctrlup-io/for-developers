@@ -6,7 +6,8 @@ import { routes } from "./NavigationMenu";
 
 function NavigationTitle() {
   const location = useLocation();
-  const route = routes.find((route) => route.path.match(location.pathname));
+  const matches = routes.filter((route) => location.pathname.match(route.path));
+  const route = matches[matches.length - 1];
   if (!route) return null;
   return (
     <>
