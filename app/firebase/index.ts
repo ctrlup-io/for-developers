@@ -1,5 +1,5 @@
 import { getApp, getApps, initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore/lite";
+import { getFirestore } from "firebase/firestore";
 
 const app =
   getApps().length === 0
@@ -9,6 +9,9 @@ const app =
         appId: process.env.FIREBASE_APP_ID,
       })
     : getApp();
+
 const db = getFirestore(app);
 
 export { app, db };
+export { default as getJob } from "./getJob";
+export { default as getJobs } from "./getJobs";
