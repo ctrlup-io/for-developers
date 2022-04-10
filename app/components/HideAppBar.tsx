@@ -58,7 +58,7 @@ export default function HideAppBar() {
               height={32}
               component="img"
               loading="lazy"
-              src="favicon-32x32.png"
+              src="/favicon-32x32.png"
               alt="ctrl up logo"
             />
           </Toolbar>
