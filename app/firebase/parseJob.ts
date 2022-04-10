@@ -45,7 +45,7 @@ function getExperienceRange(seniorities: Seniority[]) {
     .reduce(
       (acc, seniority) => [
         Math.min(seniority.experience.min, acc[0]),
-        Math.max(seniority.experience.max, acc[1]),
+        Math.max(seniority.experience.max || seniority.experience.min, acc[1]),
       ],
       [Infinity, 0]
     )

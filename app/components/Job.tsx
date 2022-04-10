@@ -8,22 +8,16 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import { Link } from "remix";
 
 export default function Job({
   id,
   title,
-  skills,
+  mainSkills,
   experience,
   salary,
   description,
-}: {
-  id: String;
-  title: String;
-  skills: String[];
-  experience: Number;
-  salary: Number;
-  description: String;
-}) {
+}: JobProps) {
   return (
     <Card icon={<EmailOutlined color="action" />} title={title}>
       <CardContent sx={{ pt: 2 }}>
@@ -36,7 +30,7 @@ export default function Job({
           </Grid>
         </Grid>
         <Grid container spacing={1} mb={1}>
-          {skills.map((skill) => (
+          {mainSkills.map((skill) => (
             <Grid item key={skill}>
               <Chip label={skill} variant="outlined" />
             </Grid>
@@ -45,8 +39,20 @@ export default function Job({
         <Typography>{description}</Typography>
       </CardContent>
       <CardActions>
-        <Button variant="outlined">Lire plus...</Button>
+        <Button variant="outlined" component={Link} to={`/jobs/${id}`}>
+          Lire plus...
+        </Button>
       </CardActions>
     </Card>
   );
 }
+
+type JobProps = {
+  id: string;
+  title: string;
+  description: string;
+  experience: number;
+  salary: number;
+  mainSkills: string[];
+  completeSkills: string[];
+};
