@@ -1,3 +1,18 @@
+# [1.9.0](https://github.com/ctrlup-io/for-developers/compare/v1.8.0...v1.9.0) (2022-04-12)
+
+
+### Bug Fixes
+
+* 🐛 logo source path ([e131a3a](https://github.com/ctrlup-io/for-developers/commit/e131a3aaa933210649ba428647c505530fe06911))
+* 🐛 match subroutes in nav title ([05ce96f](https://github.com/ctrlup-io/for-developers/commit/05ce96f5aac4be0ae3914a9e59b8b85ae15dbb2d))
+
+
+### Features
+
+* 🎸 back button on nav title ([b415755](https://github.com/ctrlup-io/for-developers/commit/b4157554b5e4ae649b4b650c0658d26642fdd797))
+* 🎸 firebase utils ([4b25ddc](https://github.com/ctrlup-io/for-developers/commit/4b25ddc1de207d7d8a38a6a80df9fcea71867ec7))
+* 🎸 job details page ([6f1bead](https://github.com/ctrlup-io/for-developers/commit/6f1beada999df58ef5ab7f4194f95e7df66fd3e7))
+
 # [1.8.0](https://github.com/ctrlup-io/for-developers/compare/v1.7.0...v1.8.0) (2022-03-28)
 
 
