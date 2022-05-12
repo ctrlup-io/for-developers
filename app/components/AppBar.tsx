@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  AppBar,
+  AppBar as MuiAppBar,
   Toolbar,
   useScrollTrigger,
   Slide,
@@ -26,7 +26,7 @@ function HideOnScroll({ children }: { children: React.ReactElement }) {
   );
 }
 
-export default function HideAppBar() {
+export default function AppBar() {
   const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -35,7 +35,7 @@ export default function HideAppBar() {
   return (
     <>
       <HideOnScroll>
-        <AppBar sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+        <MuiAppBar sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
           <Toolbar sx={{ alignItems: "center" }}>
             <IconButton
               aria-label="open drawer"
@@ -62,7 +62,7 @@ export default function HideAppBar() {
               alt="ctrl up logo"
             />
           </Toolbar>
-        </AppBar>
+        </MuiAppBar>
       </HideOnScroll>
       <Drawer
         open={open}

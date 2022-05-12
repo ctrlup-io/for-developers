@@ -1,6 +1,6 @@
-import { colors } from "@ctrlup/rainbow-react";
 import { Box, Button, Typography } from "@mui/material";
-import { Link } from "remix";
+import { colors } from "@ctrlup/rainbow-react";
+import { Link } from "@remix-run/react";
 
 export function meta() {
   return {

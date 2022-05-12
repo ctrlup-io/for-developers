@@ -6,11 +6,11 @@ import {
   ListItemButton,
   ListItemText,
 } from "@mui/material";
-import { NavLink } from "remix";
+import { NavLink } from "@remix-run/react";
 import { colors } from "@ctrlup/rainbow-react";
 import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
 
-import { Route } from "./NavigationMenu";
+import type { Route } from "./NavigationMenu";
 import NpmIcon from "./NpmIcon";
 import DiscordIcon from "./DiscordIcon";
 

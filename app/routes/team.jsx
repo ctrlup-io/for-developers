@@ -6,7 +6,7 @@ import {
   ImageListItemBar,
   Card,
 } from "@mui/material";
-import { Link, useLoaderData } from "remix";
+import { Link, useLoaderData } from "@remix-run/react";
 
 export function meta() {
   return {

@@ -5,7 +5,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import { NavLink } from "remix";
+import { NavLink } from "@remix-run/react";
 import {
   AboutIcon,
   colors,

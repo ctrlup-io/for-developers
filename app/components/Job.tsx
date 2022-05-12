@@ -8,7 +8,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 
 export default function Job({
   id,

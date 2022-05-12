@@ -6,7 +6,7 @@ import {
   CardContent,
   Grid,
 } from "@mui/material";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 import { CollapseCard } from "@ctrlup/rainbow-react";
 
 import ShoePrintsIcon from "../components/ShoePrintsIcon";

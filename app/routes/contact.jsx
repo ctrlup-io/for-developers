@@ -1,5 +1,5 @@
 import { Button, TextField, Typography, Box, Link } from "@mui/material";
-import { useLoaderData } from "remix";
+import { useLoaderData } from "@remix-run/react";
 
 export function meta() {
   return {

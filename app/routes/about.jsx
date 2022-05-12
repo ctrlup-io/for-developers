@@ -5,7 +5,7 @@ import {
   ImageListItem,
   Button,
 } from "@mui/material";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 import { CollapseCard } from "@ctrlup/rainbow-react";
 
 import Title from "../components/Title";

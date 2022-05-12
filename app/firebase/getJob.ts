@@ -1,6 +1,7 @@
 import getAll from "./getAll";
 import getOne from "./getOne";
-import parseJob, { Job } from "./parseJob";
+import type { Job } from "./parseJob";
+import parseJob from "./parseJob";
 
 export default async function getJob(id: string) {
   const seniorityLevels = await getAll("seniorityLevels");

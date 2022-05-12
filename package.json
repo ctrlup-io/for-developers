@@ -13,7 +13,6 @@
     "build": "rimraf public/build .netlify && remix build",
     "commit": "git-cz",
     "format": "prettier --write {*,app/**/*}.{js,jsx,ts,tsx,json,md}",
-    "postinstall": "remix setup node",
     "lint": "eslint --cache .",
     "release:dry": "node-env-run --exec 'semantic-release --dry-run'",
     "start": "netlify dev",

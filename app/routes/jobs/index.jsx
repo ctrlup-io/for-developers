@@ -1,5 +1,5 @@
 import { Alert, Stack, Typography } from "@mui/material";
-import { useLoaderData } from "remix";
+import { useLoaderData } from "@remix-run/react";
 import { json } from "@remix-run/node";
 
 import Job from "../../components/Job";

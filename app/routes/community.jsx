@@ -1,5 +1,5 @@
 import { Box, Button, Typography, Link as MuiLink } from "@mui/material";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 
 import Title from "../components/Title";
 
