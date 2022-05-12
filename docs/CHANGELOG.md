@@ -1,3 +1,11 @@
+# [1.10.0](https://github.com/ctrlup-io/for-developers/compare/v1.9.0...v1.10.0) (2022-05-12)
+
+
+### Features
+
+* 🎸 external links in footer ([811617b](https://github.com/ctrlup-io/for-developers/commit/811617b397361b52e4f7716c5695c7d95e238c65))
+* 🎸 Privacy and Terms page ([701c519](https://github.com/ctrlup-io/for-developers/commit/701c5190cbfd971f9e013d73608022854e6753a4))
+
 # [1.9.0](https://github.com/ctrlup-io/for-developers/compare/v1.8.0...v1.9.0) (2022-04-12)
 
 
