@@ -3,7 +3,6 @@ import { createTheme } from "@mui/material/styles";
 import { theme, ThemeProvider } from "@ctrlup/rainbow-react";
 import type { ReactNode } from "react";
 import type { ThemeOptions } from "@mui/material";
-import { useMatches } from "@remix-run/react";
 
 import AppBar from "./AppBar";
 import Footer from "./Footer";
@@ -17,8 +16,6 @@ export default function App({
   children: ReactNode;
   hideAppBar?: boolean;
 }) {
-  const matches = useMatches();
-  const isIndex = matches.some((match) => match.id === "routes/index");
   return (
     <ThemeProvider theme={muiTheme}>
       {!hideAppBar && <AppBar />}
@@ -32,7 +29,7 @@ export default function App({
       >
         {children}
       </Container>
-      {!isIndex && <Footer />}
+      <Footer />
     </ThemeProvider>
   );
 }
