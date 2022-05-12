@@ -74,7 +74,7 @@
     "trim-newlines": "^3.0.1"
   },
   "dependencies": {
-    "@ctrlup/rainbow-react": "^1.2.3",
+    "@ctrlup/rainbow-react": "^1.2.5",
     "@emotion/cache": "^11.7.1",
     "@emotion/react": "^11.8.1",
     "@emotion/server": "^11.4.0",

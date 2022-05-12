@@ -138,7 +138,7 @@ export default function Community() {
         mb={8}
         component="img"
         loading="lazy"
-        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/04%201.png?alt=media&token=6a7fdf51-e76b-46f5-bc15-6ac316fddaa8"
+        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/04%201%20(1).png?alt=media&token=802d4ccf-b4e8-4897-8195-d4ac9e3827ab"
         alt="team gathering"
       />
     </>

@@ -85,7 +85,7 @@ export default function About() {
         mb={8}
         component="img"
         loading="lazy"
-        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/06%201.png?alt=media&token=d983ecd7-6c95-40ef-8617-b4a5bf01a4c3"
+        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/06%201.png?alt=media&token=d83ac3d0-dd2b-4c8d-90e4-3a87dfc8f24e"
         alt="team-on-summit"
       />
       <Typography variant="h2" mb={4}>
