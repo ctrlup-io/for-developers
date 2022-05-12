@@ -1,3 +1,12 @@
+## [1.10.1](https://github.com/ctrlup-io/for-developers/compare/v1.10.0...v1.10.1) (2022-05-12)
+
+
+### Bug Fixes
+
+* 🐛 darker background ([e0bcbed](https://github.com/ctrlup-io/for-developers/commit/e0bcbed7968209346add4844ed8c00b381616a02))
+* 🐛 footer everywhere! ([81e0e4c](https://github.com/ctrlup-io/for-developers/commit/81e0e4c0a6469b8db63cff6a8b5857ab15bc9f6b))
+* 🐛 upgrade remix ([8e0d7db](https://github.com/ctrlup-io/for-developers/commit/8e0d7db7a61244291ca03bce761827d16695b968))
+
 # [1.10.0](https://github.com/ctrlup-io/for-developers/compare/v1.9.0...v1.10.0) (2022-05-12)
 
 
