@@ -102,6 +102,7 @@
     "@semantic-release/git": "^10.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.9.0",
+    "git-cz": "^4.9.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "node-env-run": "^4.0.2",
