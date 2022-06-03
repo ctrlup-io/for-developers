@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/ctrlup-io/for-developers/compare/v1.10.1...v1.10.2) (2022-06-03)
+
+
+### Bug Fixes
+
+* 🐛 use [@remix](https://github.com/remix) hook i/o react-router ([9c14696](https://github.com/ctrlup-io/for-developers/commit/9c14696ff5369fda31e8ba8af99b3b42d0202144))
+
 ## [1.10.1](https://github.com/ctrlup-io/for-developers/compare/v1.10.0...v1.10.1) (2022-05-12)
 
 
