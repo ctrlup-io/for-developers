@@ -7,12 +7,10 @@ import {
   ListItemText,
 } from "@mui/material";
 import { NavLink } from "@remix-run/react";
-import { colors } from "@ctrlup/rainbow-react";
+import { colors, DiscordIcon, NpmIcon } from "@ctrlup/rainbow-react";
 import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
 
 import type { Route } from "./NavigationMenu";
-import NpmIcon from "./NpmIcon";
-import DiscordIcon from "./DiscordIcon";
 
 function Footer() {
   return (

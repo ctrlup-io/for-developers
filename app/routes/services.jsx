@@ -7,12 +7,14 @@ import {
   Grid,
 } from "@mui/material";
 import { Link } from "@remix-run/react";
-import { CollapseCard } from "@ctrlup/rainbow-react";
+import {
+  CollapseCard,
+  HikingIcon,
+  ShoePrintsIcon,
+  SignatureIcon,
+  SignIcon,
+} from "@ctrlup/rainbow-react";
 
-import ShoePrintsIcon from "../components/ShoePrintsIcon";
-import HikingIcon from "../components/HikingIcon";
-import SignatureIcon from "../components/SignatureIcon";
-import SignIcon from "../components/SignIcon";
 import Title from "../components/Title";
 
 export function meta() {
