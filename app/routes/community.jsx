@@ -1,7 +1,6 @@
+import { Title } from "@ctrlup/rainbow-react";
 import { Box, Button, Typography, Link as MuiLink } from "@mui/material";
 import { Link } from "@remix-run/react";
-
-import Title from "../components/Title";
 
 export function meta() {
   return {

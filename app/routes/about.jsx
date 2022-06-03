@@ -6,9 +6,7 @@ import {
   Button,
 } from "@mui/material";
 import { Link } from "@remix-run/react";
-import { CollapseCard } from "@ctrlup/rainbow-react";
-
-import Title from "../components/Title";
+import { CollapseCard, Title } from "@ctrlup/rainbow-react";
 
 export function meta() {
   return {

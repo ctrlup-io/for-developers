@@ -1,9 +1,9 @@
 import { Alert, Stack, Typography } from "@mui/material";
 import { useLoaderData } from "@remix-run/react";
 import { json } from "@remix-run/node";
+import { Title } from "@ctrlup/rainbow-react";
 
 import Job from "../../components/Job";
-import Title from "../../components/Title";
 import { getJobs } from "../../firebase";
 
 export function meta() {

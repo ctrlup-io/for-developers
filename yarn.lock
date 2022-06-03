@@ -1369,10 +1369,10 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
-"@ctrlup/rainbow-react@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@ctrlup/rainbow-react/-/rainbow-react-1.3.0.tgz#79073a184f2938f3f3a619c017fc6f70f783943c"
-  integrity sha512-A4SzREfPV6sGwSEeQhLiOvenBq4ujJSTdDzZ4I1ZUb3e5faPRKdwgztlpp06I3CE9keZliajPgjuWprSt8wKrg==
+"@ctrlup/rainbow-react@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@ctrlup/rainbow-react/-/rainbow-react-1.4.0.tgz#0452d7e6e39c6888da660372372f0e3bafca36ce"
+  integrity sha512-NDGsQ/lsktGEvdcM3jR/kE5KxeHCHRGstPG1t5Ye1Ug7aUBy5I1P4GXO0mBGn1j0lz77omstMLVaqKeJR2nuoA==
   dependencies:
     prop-types "^15.8.1"
 

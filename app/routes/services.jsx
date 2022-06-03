@@ -13,9 +13,8 @@ import {
   ShoePrintsIcon,
   SignatureIcon,
   SignIcon,
+  Title,
 } from "@ctrlup/rainbow-react";
-
-import Title from "../components/Title";
 
 export function meta() {
   return {
