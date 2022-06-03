@@ -1,7 +1,6 @@
 import React from "react";
 import { IconButton, Typography } from "@mui/material";
-import { useLocation } from "react-router";
-import { useNavigate } from "@remix-run/react";
+import { useLocation, useNavigate } from "@remix-run/react";
 import { ArrowBack } from "@mui/icons-material";
 
 import { routes } from "./NavigationMenu";
