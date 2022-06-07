@@ -21,10 +21,10 @@ function Footer() {
       flexDirection="column"
     >
       <List disablePadding>
-        {internals.map((link) => (
+        {internals.map(({ to, name, primary }) => (
           <NavLink
-            key={link.name}
-            to={link.path}
+            key={name}
+            to={to}
             style={{
               textDecoration: "none",
             }}
@@ -32,18 +32,18 @@ function Footer() {
             {({ isActive }) => (
               <ListItemButton
                 sx={{
-                  background: link.primary && colors.RAINBOW,
+                  background: primary ? colors.RAINBOW : null,
                 }}
               >
                 <ListItemText
-                  primary={link.name}
+                  primary={name}
                   primaryTypographyProps={{
-                    color: link.primary
+                    color: primary
                       ? "common.black"
                       : isActive
                       ? "textPrimary"
                       : "textSecondary",
-                    fontWeight: link.primary && 700,
+                    fontWeight: primary && 700,
                     variant: "overline",
                     textAlign: "center",
                     fontSize: 14,
@@ -65,21 +65,24 @@ function Footer() {
         }}
         disablePadding
       >
-        {externals.map((link) => (
-          <IconButton
-            key={link.name}
-            aria-label={link.name}
-            href={link.path}
-            target="_blank"
-            sx={{ p: 1 }}
-          >
-            <link.Icon
-              sx={{
-                fill: colors.WHITE[50],
-              }}
-            />
-          </IconButton>
-        ))}
+        {externals.map(
+          ({ to, name, Icon }) =>
+            Icon && (
+              <IconButton
+                key={name}
+                aria-label={name}
+                href={to}
+                target="_blank"
+                sx={{ p: 1 }}
+              >
+                <Icon
+                  sx={{
+                    fill: colors.WHITE[50],
+                  }}
+                />
+              </IconButton>
+            )
+        )}
       </List>
       <Divider variant="middle" />
       <List disablePadding>
@@ -129,36 +132,36 @@ function Footer() {
 }
 
 const internals: Route[] = [
-  { path: "/about", name: "À propos" },
-  { path: "/services", name: "Services" },
-  { path: "/team", name: "Équipe" },
-  { path: "/jobs", name: "Jobs" },
-  { path: "/contact", name: "Contact", primary: true },
+  { to: "/about", name: "À propos" },
+  { to: "/services", name: "Services" },
+  { to: "/team", name: "Équipe" },
+  { to: "/jobs", name: "Jobs" },
+  { to: "/contact", name: "Contact", primary: true },
 ];
 
 const externals: Route[] = [
   {
-    path: "https://www.linkedin.com/company/ctrlup/",
+    to: "https://www.linkedin.com/company/ctrlup/",
     name: "Ctrl Up sur LinkedIn",
     Icon: LinkedIn,
   },
   {
-    path: "https://www.instagram.com/ctrlup_team/",
+    to: "https://www.instagram.com/ctrlup_team/",
     name: "Ctrl Up Team sur Instagram",
     Icon: Instagram,
   },
   {
-    path: "https://discord.gg/5NPXddG9jx",
+    to: "https://discord.gg/5NPXddG9jx",
     name: "Tech Ctrl sur Discord",
     Icon: DiscordIcon,
   },
   {
-    path: "https://github.com/ctrlup-io",
+    to: "https://github.com/ctrlup-io",
     name: "Ctrl Up sur GitHub",
     Icon: GitHub,
   },
   {
-    path: "https://www.npmjs.com/org/ctrlup",
+    to: "https://www.npmjs.com/org/ctrlup",
     name: "Ctrl Up sur Npm",
     Icon: NpmIcon,
   },

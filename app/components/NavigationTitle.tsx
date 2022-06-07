@@ -8,17 +8,18 @@ import { routes } from "./NavigationMenu";
 function NavigationTitle() {
   const navigate = useNavigate();
   const location = useLocation();
-  const matches = routes.filter((route) => location.pathname.match(route.path));
+  const matches = routes.filter((route) => location.pathname.match(route.to));
   const route = matches[matches.length - 1];
-  const isRoot = route.path === location.pathname;
+  if (!route) return null;
+  const { to, Icon, name } = route;
+  const isRoot = to === location.pathname;
   const onBack = () => {
     navigate(-1);
   };
-  if (!route) return null;
   return (
     <>
-      <route.Icon color="action" fontSize="small" sx={{ mr: 2 }} />
-      <Typography variant="h4">{route.name}</Typography>
+      {Icon && <Icon color="action" fontSize="small" sx={{ mr: 2 }} />}
+      <Typography variant="h4">{name}</Typography>
       {!isRoot && (
         <IconButton onClick={onBack}>
           <ArrowBack />

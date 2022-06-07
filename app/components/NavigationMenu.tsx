@@ -1,4 +1,5 @@
 import React from "react";
+import type { SvgIconProps } from "@mui/material";
 import {
   List,
   ListItemButton,
@@ -20,10 +21,10 @@ import {
 function NavigationMenu({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <List disablePadding>
-      {routes.map((route) => (
+      {routes.map(({ to, name, Icon, primary }) => (
         <NavLink
-          key={route.name}
-          to={route.path}
+          key={name}
+          to={to}
           style={{
             textDecoration: "none",
           }}
@@ -32,21 +33,21 @@ function NavigationMenu({ onNavigate }: { onNavigate?: () => void }) {
           {({ isActive }) => (
             <ListItemButton
               sx={{
-                background: route.primary && colors.RAINBOW,
+                background: primary && colors.RAINBOW,
               }}
             >
-              {route.Icon && (
+              {Icon && (
                 <ListItemIcon>
-                  <route.Icon
-                    color={isActive && !route.primary ? "action" : "default"}
+                  <Icon
+                    color={isActive && !primary ? "action" : "inherit"}
                     fontSize="small"
                   />
                 </ListItemIcon>
               )}
               <ListItemText
-                primary={route.name}
+                primary={name}
                 primaryTypographyProps={{
-                  color: route.primary
+                  color: primary
                     ? "common.black"
                     : isActive
                     ? "textPrimary"
@@ -62,19 +63,19 @@ function NavigationMenu({ onNavigate }: { onNavigate?: () => void }) {
 }
 
 export const routes: Route[] = [
-  { path: "/", name: "Accueil", Icon: HomeIcon },
-  { path: "/about", name: "À propos", Icon: AboutIcon },
-  { path: "/services", name: "Services", Icon: ServiceIcon },
-  { path: "/community", name: "Communauté", Icon: CommunityIcon },
-  { path: "/team", name: "Équipe", Icon: TeamIcon },
-  { path: "/jobs", name: "Jobs", Icon: JobIcon },
-  { path: "/contact", name: "Contact", Icon: ContactIcon, primary: true },
+  { to: "/", name: "Accueil", Icon: HomeIcon },
+  { to: "/about", name: "À propos", Icon: AboutIcon },
+  { to: "/services", name: "Services", Icon: ServiceIcon },
+  { to: "/community", name: "Communauté", Icon: CommunityIcon },
+  { to: "/team", name: "Équipe", Icon: TeamIcon },
+  { to: "/jobs", name: "Jobs", Icon: JobIcon },
+  { to: "/contact", name: "Contact", Icon: ContactIcon, primary: true },
 ];
 
 export type Route = {
-  path: string;
+  to: string;
   name: string;
-  Icon?: React.ElementType;
+  Icon?: (props: SvgIconProps) => JSX.Element;
   primary?: boolean;
 };
 
