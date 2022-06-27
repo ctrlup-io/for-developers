@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/ctrlup-io/for-developers/compare/v1.11.0...v1.12.0) (2022-06-27)
+
+
+### Features
+
+* 🎸 footer desktop version ([1ce6d8c](https://github.com/ctrlup-io/for-developers/commit/1ce6d8c372a7d9af87cf9f142539e6ccb06f7850))
+
 # [1.11.0](https://github.com/ctrlup-io/for-developers/compare/v1.10.2...v1.11.0) (2022-06-27)
 
 
