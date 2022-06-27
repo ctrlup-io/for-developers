@@ -201,3 +201,7 @@ sketch
 
 ### Remix ###
 /public/build
+
+### Yalc ###
+.yalc
+yalc.lock
