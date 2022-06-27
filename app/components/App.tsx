@@ -1,5 +1,5 @@
-import { Container } from "@mui/material";
-import { createTheme } from "@mui/material/styles";
+import { Container, useMediaQuery } from "@mui/material";
+import { createTheme, useTheme } from "@mui/material/styles";
 import { theme, ThemeProvider } from "@ctrlup/rainbow-react";
 import type { ReactNode } from "react";
 import type { ThemeOptions } from "@mui/material";
@@ -16,11 +16,13 @@ export default function App({
   children: ReactNode;
   hideAppBar?: boolean;
 }) {
+  const theme = useTheme();
+  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <ThemeProvider theme={muiTheme}>
       {!hideAppBar && <AppBar />}
       <Container
-        maxWidth="xs"
+        maxWidth={isLarge ? "xl" : "xs"}
         component="main"
         sx={{
           mt: 10,
@@ -29,7 +31,7 @@ export default function App({
       >
         {children}
       </Container>
-      <Footer />
+      <Footer isLarge={isLarge} />
     </ThemeProvider>
   );
 }
