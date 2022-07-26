@@ -22,7 +22,7 @@ export default function App({
     <ThemeProvider theme={muiTheme}>
       {!hideAppBar && <AppBar />}
       <Container
-        maxWidth={isLarge ? "xl" : "xs"}
+        maxWidth={isLarge ? "lg" : "xs"}
         component="main"
         sx={{
           mt: 10,
