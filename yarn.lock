@@ -1369,10 +1369,10 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
-"@ctrlup/rainbow-react@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@ctrlup/rainbow-react/-/rainbow-react-1.5.0.tgz#f2c2acf4d51934d6cde932ba2e3448cde20b0d7c"
-  integrity sha512-Ka5BDsc/y4unqNEBC2ucc0UaXRvU3NhET8KPuc955Cd51J+cv+TqsAX9iEDuScGhWZuxCA7lc69bPqSgVM5YWA==
+"@ctrlup/rainbow-react@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@ctrlup/rainbow-react/-/rainbow-react-1.6.0.tgz#956b0cf55c3ab811b84a0aba90e314bb94960543"
+  integrity sha512-Sy7vyyCyra9ircIRHRuMBZngQ+Pb0WfJ/yhVU8YetKnvIJiVAEVNHal+EwqyZZSJ8/eQRV6DJ5QqLBfhHUiGYg==
   dependencies:
     prop-types "^15.8.1"
 
@@ -4276,6 +4276,11 @@ crypto-random-string@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-2.0.0.tgz#ef2a7a966ec11083388369baa02ebead229b30d5"
   integrity sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==
+
+css-mediaquery@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/css-mediaquery/-/css-mediaquery-0.1.2.tgz#6a2c37344928618631c54bd33cedd301da18bea0"
+  integrity sha512-COtn4EROW5dBGlE/4PiKnh6rZpAPxDeFLaEEwt4i10jpDMFt2EhQGS79QmmrO+iKCHv0PU/HrOWEhijFd1x99Q==
 
 csstype@^3.0.2:
   version "3.0.11"
@@ -10404,6 +10409,11 @@ typescript@^4.4.3:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.2.tgz#fe12d2727b708f4eef40f51598b3398baa9611d4"
   integrity sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==
+
+ua-parser-js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.2.tgz#e2976c34dbfb30b15d2c300b2a53eac87c57a775"
+  integrity sha512-00y/AXhx0/SsnI51fTc0rLRmafiGOM4/O+ny10Ps7f+j/b8p/ZY11ytMgznXkOVo4GQ+KwQG5UQLkLGirsACRg==
 
 uglify-js@^3.1.4:
   version "3.15.2"

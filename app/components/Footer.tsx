@@ -1,13 +1,16 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
 import { DiscordIcon, NpmIcon } from "@ctrlup/rainbow-react";
+import { useTheme } from "@mui/material/styles";
 
 import NavList from "./NavList";
 import NavListItem from "./NavListItem";
 import NavIconList from "./NavIconList";
 import NavIconListItem from "./NavIconListItem";
 
-function Footer({ isLarge = false }: { isLarge: boolean }) {
+function Footer() {
+  const theme = useTheme();
+  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   if (isLarge) {
     return (
       <Box component="nav" bgcolor="background.paper" p={8} display="flex">
