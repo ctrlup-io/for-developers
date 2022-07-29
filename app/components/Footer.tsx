@@ -118,7 +118,7 @@ function Footer() {
         />
         <NavListItem name="Mentions légales" to="/privacy-and-terms" />
       </NavList>
-      <Typography>
+      <Typography p={4} textAlign="center">
         Fait avec{" "}
         <span role="img" aria-label="heart">
           ❤️
