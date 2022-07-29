@@ -1,3 +1,16 @@
+# [1.13.0](https://github.com/ctrlup-io/for-developers/compare/v1.12.0...v1.13.0) (2022-07-29)
+
+
+### Bug Fixes
+
+* 🐛 reduce max width container ([08e513f](https://github.com/ctrlup-io/for-developers/commit/08e513f58eda4c5c3ebcf3cfb991f1d09f1aea7a))
+
+
+### Features
+
+* 🎸 about page ([3051776](https://github.com/ctrlup-io/for-developers/commit/30517760c6970c0d7e3ce3debdc4f07dd364a5a8))
+* 🎸 get screen size on server-side ([e719c6d](https://github.com/ctrlup-io/for-developers/commit/e719c6d53d71794d762e8fb33fcd120557e0b5d0))
+
 # [1.12.0](https://github.com/ctrlup-io/for-developers/compare/v1.11.0...v1.12.0) (2022-06-27)
 
 
