@@ -169,8 +169,8 @@ export default function About() {
           </Typography>
         </Stack>
       </Grid>
-      <Grid item md={12} lg={4} order={isLarge ? 5 : null}>
-        <Stack spacing={2} mt={isLarge ? 16 : null} width="100%">
+      <Grid item md={12} lg={4} order={isLarge ? 5 : null} width="100%">
+        <Stack spacing={2} mt={isLarge ? 16 : null}>
           <CollapseCard defaultExpanded={isLarge} title="Bienveillance">
             <Typography>
               L'altruisme et le soin de l'autre sont des idées que nous aimons,
