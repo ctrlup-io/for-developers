@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/ctrlup-io/for-developers/compare/v1.13.1...v1.13.2) (2022-07-29)
+
+
+### Bug Fixes
+
+* 🐛 alignment and spacing team dedicace in footer ([e2d4358](https://github.com/ctrlup-io/for-developers/commit/e2d435870941b0cddb8f45e0c54c2f01aa8a5cb7))
+
 ## [1.13.1](https://github.com/ctrlup-io/for-developers/compare/v1.13.0...v1.13.1) (2022-07-29)
 
 
