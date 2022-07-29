@@ -12,15 +12,15 @@ import Footer from "./Footer";
 export default function Layout({
   children,
   hideAppBar = false,
-  deviceType = "mobile",
+  small = true,
 }: {
   children: ReactNode;
   hideAppBar?: boolean;
-  deviceType: string;
+  small: boolean;
 }) {
   const ssrMatchMedia = (query: string) => ({
     matches: mediaQuery.match(query, {
-      width: deviceType === "mobile" ? "0px" : "1200px",
+      width: small ? "0px" : "1200px",
     }),
   });
 
@@ -41,7 +41,7 @@ export default function Layout({
         maxWidth="lg"
         component="main"
         sx={{
-          mt: 10,
+          mt: small ? 10 : 20,
           mb: 16,
         }}
       >

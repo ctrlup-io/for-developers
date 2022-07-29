@@ -19,14 +19,15 @@ export const loader: LoaderFunction = async ({ request }) => {
   const deviceType =
     parser(request.headers.get("user-agent") || undefined).device.type ||
     "desktop";
-  return json(deviceType);
+  const small = deviceType === "mobile";
+  return json(small);
 };
 
 export default function App() {
-  const deviceType = useLoaderData();
+  const small = useLoaderData();
   return (
     <Document>
-      <Layout deviceType={deviceType}>
+      <Layout small={small}>
         <Outlet />
       </Layout>
     </Document>
@@ -35,10 +36,10 @@ export default function App() {
 
 export function CatchBoundary() {
   const caught = useCatch();
-  const deviceType = useLoaderData();
+  const small = useLoaderData();
   return (
     <Document title={`${caught.status} ${caught.statusText}`}>
-      <Layout deviceType={deviceType}>
+      <Layout small={small}>
         {caught.status === 404 ? (
           <>
             <Typography variant="h2" mb={4}>
@@ -60,10 +61,10 @@ export function CatchBoundary() {
 }
 
 export function ErrorBoundary({ error }: { error: Error }) {
-  const deviceType = useLoaderData();
+  const small = useLoaderData();
   return (
     <Document title="Error!">
-      <Layout deviceType={deviceType} hideAppBar>
+      <Layout small={small} hideAppBar>
         <Alert severity="error">
           [ErrorBoundary]: There was an error: {error.message}
         </Alert>
