@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/ctrlup-io/for-developers/compare/v1.13.0...v1.13.1) (2022-07-29)
+
+
+### Bug Fixes
+
+* 🐛 collapsable cards full width on mobile ([76441b1](https://github.com/ctrlup-io/for-developers/commit/76441b147a94631eab0f8836913729957341530e))
+
 # [1.13.0](https://github.com/ctrlup-io/for-developers/compare/v1.12.0...v1.13.0) (2022-07-29)
 
 
