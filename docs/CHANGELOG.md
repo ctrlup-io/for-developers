@@ -1,3 +1,10 @@
+## [1.13.3](https://github.com/ctrlup-io/for-developers/compare/v1.13.2...v1.13.3) (2022-08-01)
+
+
+### Bug Fixes
+
+* 🐛 parallelize http requests on Jobs page ([#34](https://github.com/ctrlup-io/for-developers/issues/34)) ([2296d1e](https://github.com/ctrlup-io/for-developers/commit/2296d1e8ba4809aa10aed59693620e3aa2690a5f))
+
 ## [1.13.2](https://github.com/ctrlup-io/for-developers/compare/v1.13.1...v1.13.2) (2022-07-29)
 
 
