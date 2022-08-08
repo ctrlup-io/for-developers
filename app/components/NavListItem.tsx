@@ -1,9 +1,4 @@
-import {
-  Button,
-  ListItemButton,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { ListItemButton, ListItemText, Typography } from "@mui/material";
 import React from "react";
 
 import { colors } from "@ctrlup/rainbow-react";
