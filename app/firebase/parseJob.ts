@@ -1,4 +1,10 @@
-export default function parseJob({ skills, seniorityLevels }) {
+export default function parseJob({
+  skills,
+  seniorityLevels,
+}: {
+  skills: { id: string }[];
+  seniorityLevels: { id: string }[];
+}) {
   return ({
     id,
     title,
