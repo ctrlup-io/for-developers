@@ -1,3 +1,10 @@
+## [1.13.4](https://github.com/ctrlup-io/for-developers/compare/v1.13.3...v1.13.4) (2022-08-08)
+
+
+### Bug Fixes
+
+* 🐛 nav links are not buttons on large screens ([9277949](https://github.com/ctrlup-io/for-developers/commit/92779498842938a1e19ae5c4386d83e35ef3f8d4))
+
 ## [1.13.3](https://github.com/ctrlup-io/for-developers/compare/v1.13.2...v1.13.3) (2022-08-01)
 
 
