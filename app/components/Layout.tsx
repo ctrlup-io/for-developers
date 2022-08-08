@@ -25,6 +25,19 @@ export default function Layout({
   });
 
   const muiTheme = createTheme(theme as ThemeOptions, {
+    typography: small
+      ? {}
+      : {
+          h1: {
+            fontSize: 116,
+          },
+          h2: {
+            fontSize: 72,
+          },
+          h3: {
+            fontSize: 48,
+          },
+        },
     components: {
       MuiUseMediaQuery: {
         defaultProps: {
@@ -33,7 +46,6 @@ export default function Layout({
       },
     },
   });
-
   return (
     <ThemeProvider theme={muiTheme}>
       {!hideAppBar && <AppBar />}

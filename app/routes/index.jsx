@@ -31,9 +31,9 @@ export default function Index() {
         <Typography variant="h5">Ctrl Up, une ESN singulière.</Typography>
       </Grid>
       <Grid item xs={isLarge ? 6 : 12} width="100%">
-        <Typography variant="h1" mb={4} fontSize={isLarge ? 116 : null}>
+        <Typography variant="h1" mb={4}>
           <Box component="span" display="inline-flex" flexDirection="column">
-            Forge <Stain index={2} scale={isLarge ? 3 : 1} />
+            Forge <Stain index={2} />
           </Box>{" "}
           tes aptitudes de{" "}
           <Typography
