@@ -9,12 +9,7 @@ import {
   Stack,
 } from "@mui/material";
 import { Link } from "@remix-run/react";
-import {
-  CollapseCard,
-  Title,
-  TopographicalLinesTwo,
-  TopographicalLinesThree,
-} from "@ctrlup/rainbow-react";
+import { CollapseCard, Title } from "@ctrlup/rainbow-react";
 import { useTheme } from "@mui/material/styles";
 
 export function meta() {
@@ -38,11 +33,13 @@ export default function About() {
           width="80%"
           zIndex={-1}
         >
-          <TopographicalLinesTwo />
+          <img src="topographicalLines2.svg" alt="topographical lines" />
         </Grid>
       )}
       <Grid item xs={12}>
-        <Title label="Une histoire d’humains" />
+        <Title variant="h2" stainIndex={0}>
+          Une histoire d’humains
+        </Title>
       </Grid>
       <Grid
         item
@@ -126,7 +123,7 @@ export default function About() {
           width="20%"
           zIndex={-1}
         >
-          <TopographicalLinesThree />
+          <img src="topographicalLines3.svg" alt="topographical lines" />
         </Grid>
       )}
       <Grid item xs={12}>

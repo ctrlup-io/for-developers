@@ -1,5 +1,5 @@
 import { Box, Button, Typography, useMediaQuery, Grid } from "@mui/material";
-import { colors, Stain, TopographicalLinesOne } from "@ctrlup/rainbow-react";
+import { colors, Stain } from "@ctrlup/rainbow-react";
 import { useTheme } from "@mui/material/styles";
 import { Link } from "@remix-run/react";
 
@@ -24,7 +24,7 @@ export default function Index() {
           width="80%"
           zIndex={-1}
         >
-          <TopographicalLinesOne />
+          <img src="topographicalLines1.svg" alt="topographical lines" />
         </Grid>
       )}
       <Grid item xs={12}>

@@ -25,7 +25,9 @@ export function meta() {
 export default function Services() {
   return (
     <>
-      <Title label="On sait faire, et on le fait bien" stainIndex={1} />
+      <Title variant="h2" stainIndex={1}>
+        On sait faire, et on le fait bien
+      </Title>
       <Typography mb={4}>
         Au même titre que les ESN, mais en beaucoup mieux, nous apportons
         plusieurs choses aux développeurs de la communauté. D'abord, Ctrl Up

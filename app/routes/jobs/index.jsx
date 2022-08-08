@@ -21,7 +21,9 @@ export default function Jobs() {
   const data = useLoaderData();
   return (
     <>
-      <Title label="Une sélection aux petits oignons" stainIndex={3} />
+      <Title variant="h2" stainIndex={3}>
+        Une sélection aux petits oignons
+      </Title>
       <Typography mb={8}>
         Retrouvez ici nos prises du mois : on s'efforce de chercher la crème des
         offres d'emplois pour éviter les usines à gaz.

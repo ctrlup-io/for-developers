@@ -11,7 +11,9 @@ export function meta() {
 export default function Community() {
   return (
     <>
-      <Title label="Être bien, être en lien" stainIndex={2} />
+      <Title variant="h2" stainIndex={2}>
+        Être bien, être en lien
+      </Title>
       <Typography mb={8}>
         On considère que le lien est primordial, et nous faisons tout pour
         l'entretenir. Que ce soit dans la participation à des{" "}
