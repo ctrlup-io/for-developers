@@ -49,21 +49,26 @@ function NavListItem({
         />
       </ListItemButton>
     );
-  if (primary) {
-    return (
-      <Button variant="contained" size="small">
-        {name}
-      </Button>
-    );
-  }
   return (
     <Typography
       component="div"
       variant="overline"
       fontSize={14}
       paddingY={1}
-      color={isActive ? "textPrimary" : "textSecondary"}
       letterSpacing={1}
+      fontWeight={isActive ? 700 : 400}
+      sx={
+        primary
+          ? {
+              background: colors.RAINBOW,
+              WebkitBackgroundClip: "text",
+              MozBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              MozTextFillColor: "transparent",
+            }
+          : null
+      }
+      color={isActive ? "textPrimary" : "textSecondary"}
     >
       {name}
     </Typography>
