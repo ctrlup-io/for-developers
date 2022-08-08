@@ -1,3 +1,15 @@
+# [1.14.0](https://github.com/ctrlup-io/for-developers/compare/v1.13.4...v1.14.0) (2022-08-08)
+
+
+### Bug Fixes
+
+* 🐛 bigger font for titles on desktop ([b1ae917](https://github.com/ctrlup-io/for-developers/commit/b1ae9174837e965d794c2cbafcdba351fb9d306c))
+
+
+### Features
+
+* 🎸 "Services" page ([8c6f0b6](https://github.com/ctrlup-io/for-developers/commit/8c6f0b6a1906ff4c35fdd66ad01c9820a142f8e0))
+
 ## [1.13.4](https://github.com/ctrlup-io/for-developers/compare/v1.13.3...v1.13.4) (2022-08-08)
 
 
