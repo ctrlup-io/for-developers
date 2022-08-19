@@ -247,20 +247,6 @@ export default function Services() {
           </Button>
         </Grid>
       )}
-      {isLarge && (
-        <Grid item xs={12} position="relative" height={360}>
-          <Box
-            component="img"
-            src="topographicalLines5.svg"
-            alt="topographical lines"
-            position="absolute"
-            zIndex={-1}
-            bottom={0}
-            right={0}
-            width="100%"
-          />
-        </Grid>
-      )}
     </Grid>
   );
 }
