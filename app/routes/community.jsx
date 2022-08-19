@@ -33,7 +33,7 @@ export default function Community() {
         mb={2}
         component="img"
         loading="lazy"
-        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/unsplash_iuqmGmst5Po.png?alt=media&token=6d04cd1b-151a-4da7-8fef-c40375d60d88"
+        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/teamatdarwin.png?alt=media&token=662f68a8-9892-4a01-b0af-e2a18b35ebd6"
         alt="team at Darwin"
       />
       <Box
