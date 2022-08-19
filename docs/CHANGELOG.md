@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/ctrlup-io/for-developers/compare/v1.15.0...v1.15.1) (2022-08-19)
+
+
+### Bug Fixes
+
+* 🐛 top lines above footer content ([8aaf950](https://github.com/ctrlup-io/for-developers/commit/8aaf950f8e852ea461502b65b164c7fb1f5aa3e0))
+
 # [1.15.0](https://github.com/ctrlup-io/for-developers/compare/v1.14.0...v1.15.0) (2022-08-19)
 
 
