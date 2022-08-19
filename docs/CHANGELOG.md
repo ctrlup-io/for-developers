@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/ctrlup-io/for-developers/compare/v1.15.1...v1.15.2) (2022-08-19)
+
+
+### Bug Fixes
+
+* 🐛 update "team at darwin" image url ([a77708e](https://github.com/ctrlup-io/for-developers/commit/a77708e2d3f44f2f2935152a64a6e4785d61b7d5))
+
 ## [1.15.1](https://github.com/ctrlup-io/for-developers/compare/v1.15.0...v1.15.1) (2022-08-19)
 
 
