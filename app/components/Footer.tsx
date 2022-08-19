@@ -82,15 +82,6 @@ function Footer() {
         display="flex"
         position="relative"
       >
-        <Box display="flex" flexDirection="column">
-          {mainNav}
-          {secondaryNav}
-        </Box>
-        <Box flexGrow={1} />
-        <Box display="flex" flexDirection="column" justifyContent="flex-end">
-          {socialNav}
-          {teamDedication}
-        </Box>
         <Box
           component="img"
           src="topographicalLines5.svg"
@@ -100,6 +91,15 @@ function Footer() {
           right={0}
           width="100%"
         />
+        <Box display="flex" flexDirection="column">
+          {mainNav}
+          {secondaryNav}
+        </Box>
+        <Box flexGrow={1} />
+        <Box display="flex" flexDirection="column" justifyContent="flex-end">
+          {socialNav}
+          {teamDedication}
+        </Box>
       </Box>
     );
   }
