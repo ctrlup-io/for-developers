@@ -75,7 +75,13 @@ function Footer() {
 
   if (isLarge) {
     return (
-      <Box component="nav" bgcolor="background.paper" p={8} display="flex">
+      <Box
+        component="nav"
+        bgcolor="background.paper"
+        p={8}
+        display="flex"
+        position="relative"
+      >
         <Box display="flex" flexDirection="column">
           {mainNav}
           {secondaryNav}
@@ -85,6 +91,15 @@ function Footer() {
           {socialNav}
           {teamDedication}
         </Box>
+        <Box
+          component="img"
+          src="topographicalLines5.svg"
+          alt="topographical lines"
+          position="absolute"
+          bottom={0}
+          right={0}
+          width="100%"
+        />
       </Box>
     );
   }
