@@ -1,5 +1,16 @@
 import { Title } from "@ctrlup/rainbow-react";
-import { Box, Button, Typography, Link as MuiLink } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Typography,
+  Link as MuiLink,
+  useMediaQuery,
+  ImageList,
+  ImageListItem,
+  Stack,
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { Link } from "@remix-run/react";
 
 export function meta() {
@@ -8,140 +19,185 @@ export function meta() {
   };
 }
 
+const images = [
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/teamatdarwin.png?alt=media&token=662f68a8-9892-4a01-b0af-e2a18b35ebd6",
+    title: "team at Darwin",
+    cols: 2,
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/unsplash_iuqmGmst5Po%20(1).png?alt=media&token=0c765adb-9df2-4e15-904f-3aa03441be39",
+    title: "team at Quizz Room",
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/teamatjt.png?alt=media&token=de702c1f-ac93-40f2-a80e-5362b4970d59",
+    title: "team at tech days",
+    isLarge: true,
+  },
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/unsplash_iuqmGmst5Po%20(2).png?alt=media&token=e3d20d94-6074-4a4a-b79f-3dec112745bc",
+    title: "team at restaurant",
+    isLarge: false,
+    cols: 2,
+  },
+];
+
 export default function Community() {
+  const theme = useTheme();
+  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   return (
-    <>
-      <Title variant="h2" stainIndex={2}>
-        Être bien, être en lien
-      </Title>
-      <Typography mb={8}>
-        On considère que le lien est primordial, et nous faisons tout pour
-        l'entretenir. Que ce soit dans la participation à des{" "}
-        <MuiLink
-          href="https://meetup.com/tech-ctrl/events/"
-          alt="events"
-          target="_blank"
-        >
-          évènements
-        </MuiLink>{" "}
-        ou dans le partage de connaissances, nous pensons que l'équipe a besoin
-        de se réunir régulièrement pour échanger.
-      </Typography>
-      <Box
-        width="100%"
-        height="auto"
-        mb={2}
-        component="img"
-        loading="lazy"
-        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/teamatdarwin.png?alt=media&token=662f68a8-9892-4a01-b0af-e2a18b35ebd6"
-        alt="team at Darwin"
-      />
-      <Box
-        width="100%"
-        height="auto"
-        mb={2}
-        component="img"
-        loading="lazy"
-        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/unsplash_iuqmGmst5Po%20(1).png?alt=media&token=0c765adb-9df2-4e15-904f-3aa03441be39"
-        alt="team at Quizz Room"
-      />
-      <Box
-        width="100%"
-        height="auto"
-        mb={8}
-        component="img"
-        loading="lazy"
-        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/unsplash_iuqmGmst5Po%20(2).png?alt=media&token=e3d20d94-6074-4a4a-b79f-3dec112745bc"
-        alt="team at restaurant"
-      />
-      <Typography variant="h5" fontWeight={700} mb={2}>
-        Les rituels de la communauté :
-      </Typography>
-      <Box component="ul" mb={8}>
-        <Box component="li" mb={2}>
-          <Typography fontWeight={700} display="block">
-            <span role="img" aria-label="waving hand">
-              👋
-            </span>{" "}
-            Kick-off du lundi
-          </Typography>
+    <Grid container flexDirection="row" spacing={4} flexWrap="wrap">
+      {isLarge && (
+        <Grid item lg={6} position="relative" minHeight={440}>
+          <Box
+            alt="climbing"
+            component="img"
+            loading="lazy"
+            width="100%"
+            src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/climbing.png?alt=media&token=fd20f574-7d4f-44f2-9641-bd99675435b4"
+          />
+        </Grid>
+      )}
+      <Grid item md={12} lg={6} container spacing={4}>
+        <Grid item xs={12}>
+          <Title variant="h2" stainIndex={2}>
+            Être bien, être en lien
+          </Title>
+        </Grid>
+        <Grid item xs={12}>
           <Typography>
-            Un débrief de 30 minutes pour suivre l'avancée des missions et se
-            souhaiter une bonne semaine.
+            On considère que le lien est primordial, et nous faisons tout pour
+            l'entretenir. Que ce soit dans la participation à des{" "}
+            <MuiLink
+              href="https://meetup.com/tech-ctrl/events/"
+              alt="events"
+              target="_blank"
+            >
+              évènements
+            </MuiLink>{" "}
+            ou dans le partage de connaissances, nous pensons que l'équipe a
+            besoin de se réunir régulièrement pour échanger.
           </Typography>
-        </Box>
-        <Box component="li" mb={2}>
-          <Typography fontWeight={700} display="block">
-            <span role="img" aria-label="cocktail">
-              🍹
-            </span>{" "}
-            Apér-eau du jeudi
-          </Typography>
-          <Typography>
-            À la débauche, on se retrouve pour partager un moment autour d'une
-            bière ou d'un thé. Gardons le contact autrement qu'avec Slack.
-          </Typography>
-        </Box>
-        <Box component="li" mb={2}>
-          <Typography fontWeight={700} display="block">
-            <span role="img" aria-label="burger">
-              🍔
-            </span>{" "}
-            Ripaille mensuelle
-          </Typography>
-          <Typography>
-            Un déjeuner avec les fondateurs. C'est le moment privilégié pour
-            prendre des nouvelles de Ctrl Up, de nous dire comment se passe ta
-            mission, de nous parler des difficultés que tu rencontres ou de tes
-            derniers succès.
-          </Typography>
-        </Box>
-        <Box component="li" mb={2}>
-          <Typography fontWeight={700} display="block">
-            <span role="img" aria-label="robot">
-              🤖
-            </span>{" "}
-            Tech days
-          </Typography>
-          <Typography>
-            Un rendez-vous bimestriel où la communauté se réunit pour faire de
-            la veille, échanger sur les métiers, se former, réaliser des
-            ateliers et des projets...
-          </Typography>
-        </Box>
-        <Box component="li" mb={2}>
-          <Typography fontWeight={700} display="block">
-            <span role="img" aria-label="tada">
-              🎉
-            </span>{" "}
-            La veillée
-          </Typography>
-          <Typography>
-            Nous nous réunirons une fois par mois pour nous retrouver autour
-            d’activités sportive ou culturelle animée par un professionnel ou
-            par un membre de la communauté.
-          </Typography>
-        </Box>
-      </Box>
-      <Button
-        color="primary"
-        variant="contained"
-        fullWidth
-        component={Link}
-        to="/blog"
-        sx={{ mb: 8 }}
-      >
-        Visitez notre blog
-      </Button>
-      <Box
-        width="100%"
-        height="auto"
-        mb={8}
-        component="img"
-        loading="lazy"
-        src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/04%201%20(1).png?alt=media&token=802d4ccf-b4e8-4897-8195-d4ac9e3827ab"
-        alt="team gathering"
-      />
-    </>
+        </Grid>
+        <Grid item xs={12}>
+          <ImageList
+            variant={isLarge ? "quilted" : "standard"}
+            cols={isLarge ? 3 : 1}
+            gap={16}
+          >
+            {images
+              .filter((image) => [undefined, isLarge].includes(image.isLarge))
+              .map((image) => (
+                <ImageListItem
+                  key={image.url}
+                  cols={(isLarge && image.cols) || 1}
+                  rows={(isLarge && image.rows) || 1}
+                >
+                  <img
+                    src={image.url}
+                    alt={image.title}
+                    loading="lazy"
+                    height={isLarge ? "auto" : 180}
+                  />
+                </ImageListItem>
+              ))}
+          </ImageList>
+        </Grid>
+        <Grid item xs={12}>
+          <Button
+            color="primary"
+            variant="contained"
+            fullWidth={!isLarge}
+            component={Link}
+            to="/team"
+          >
+            Découvrir l'équipe
+          </Button>
+        </Grid>
+      </Grid>
+      <Grid item md={12} lg={6}>
+        <Typography variant="h2">Les rituels de la communauté</Typography>
+      </Grid>
+      {isLarge && <Grid item xs />}
+      <Grid item md={12} lg={6}>
+        <Stack component="ul" spacing={2}>
+          <Box component="li">
+            <Typography fontWeight="bold" display="block">
+              <span role="img" aria-label="waving hand">
+                👋
+              </span>{" "}
+              Le point hebdo
+            </Typography>
+            <Typography>
+              Un débrief de 30 minutes pour suivre l'avancée des missions et se
+              souhaiter une bonne semaine.
+            </Typography>
+          </Box>
+          <Box component="li">
+            <Typography fontWeight="bold" display="block">
+              <span role="img" aria-label="cocktail">
+                🍹
+              </span>{" "}
+              Apér-eau du jeudi
+            </Typography>
+            <Typography>
+              À la débauche, on se retrouve pour partager un moment autour d'une
+              bière ou d'un thé. Gardons le contact autrement qu'avec Slack.
+            </Typography>
+          </Box>
+          <Box component="li">
+            <Typography fontWeight="bold" display="block">
+              <span role="img" aria-label="burger">
+                🍔
+              </span>{" "}
+              Ripaille mensuelle
+            </Typography>
+            <Typography>
+              Un déjeuner avec les fondateurs. C'est le moment privilégié pour
+              prendre des nouvelles de Ctrl Up, de nous dire comment se passe ta
+              mission, de nous parler des difficultés que tu rencontres ou de
+              tes derniers succès.
+            </Typography>
+          </Box>
+          <Box component="li">
+            <Typography fontWeight="bold" display="block">
+              <span role="img" aria-label="robot">
+                🤖
+              </span>{" "}
+              Journées Tech
+            </Typography>
+            <Typography>
+              Un rendez-vous bimestriel où la communauté se réunit pour faire de
+              la veille, échanger sur les métiers, se former, réaliser des
+              ateliers et des projets...
+            </Typography>
+          </Box>
+          <Box component="li">
+            <Typography fontWeight="bold" display="block">
+              <span role="img" aria-label="tada">
+                🎉
+              </span>{" "}
+              La veillée
+            </Typography>
+            <Typography>
+              Nous nous réunirons une fois par mois pour nous retrouver autour
+              d’activités sportive ou culturelle animée par un professionnel ou
+              par un membre de la communauté.
+            </Typography>
+          </Box>
+        </Stack>
+      </Grid>
+      <Grid item md={12} lg={6}>
+        <Box
+          width="100%"
+          height="auto"
+          mb={8}
+          component="img"
+          loading="lazy"
+          src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/04%201%20(1).png?alt=media&token=802d4ccf-b4e8-4897-8195-d4ac9e3827ab"
+          alt="team gathering"
+        />
+      </Grid>
+    </Grid>
   );
 }
