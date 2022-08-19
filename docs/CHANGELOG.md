@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/ctrlup-io/for-developers/compare/v1.14.0...v1.15.0) (2022-08-19)
+
+
+### Features
+
+* 🎸 topo lines in footer ([#35](https://github.com/ctrlup-io/for-developers/issues/35)) ([98f5ff7](https://github.com/ctrlup-io/for-developers/commit/98f5ff7fdbb3a870325b51163074af1de9d7f19e))
+
 # [1.14.0](https://github.com/ctrlup-io/for-developers/compare/v1.13.4...v1.14.0) (2022-08-08)
 
 
