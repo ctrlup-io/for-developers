@@ -1,3 +1,15 @@
+# [1.17.0](https://github.com/ctrlup-io/for-developers/compare/v1.16.1...v1.17.0) (2022-08-23)
+
+
+### Bug Fixes
+
+* 🐛 get members only on server-side ([9148a2b](https://github.com/ctrlup-io/for-developers/commit/9148a2b23907f03043efb9d4c2b8258c221f3033))
+
+
+### Features
+
+* 🎸 team page on desktop ([7a37a71](https://github.com/ctrlup-io/for-developers/commit/7a37a717254ac4a11c93e88e811bba5b44d64597))
+
 ## [1.16.1](https://github.com/ctrlup-io/for-developers/compare/v1.16.0...v1.16.1) (2022-08-23)
 
 
