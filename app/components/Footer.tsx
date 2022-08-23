@@ -75,13 +75,7 @@ function Footer() {
 
   if (isLarge) {
     return (
-      <Box
-        component="nav"
-        bgcolor="background.paper"
-        p={8}
-        display="flex"
-        position="relative"
-      >
+      <Box component="nav" p={8} display="flex" position="relative">
         <Box
           component="img"
           src="topographicalLines5.svg"
@@ -90,6 +84,7 @@ function Footer() {
           bottom={0}
           right={0}
           width="100%"
+          zIndex={-1}
         />
         <Box display="flex" flexDirection="column">
           {mainNav}
