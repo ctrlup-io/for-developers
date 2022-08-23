@@ -1,4 +1,4 @@
-import { Title } from "@ctrlup/rainbow-react";
+import { Card, Title } from "@ctrlup/rainbow-react";
 import {
   Box,
   Button,
@@ -9,6 +9,7 @@ import {
   ImageList,
   ImageListItem,
   Stack,
+  CardContent,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { Link } from "@remix-run/react";
@@ -41,6 +42,83 @@ const images = [
     cols: 2,
   },
 ];
+
+const rituals = [
+  {
+    emoji: "👋",
+    title: "Le point hebdo",
+    description:
+      "Un débrief de 30 minutes pour suivre l'avancée des missions et se souhaiter une bonne semaine.",
+  },
+  {
+    emoji: "🍹",
+    title: "Apér-eau du jeudi",
+    description:
+      "À la débauche, on se retrouve pour partager un moment autour d'une bière ou d'un thé. Gardons le contact autrement qu'avec Slack.",
+  },
+  {
+    emoji: "🍔",
+    title: "Ripaille mensuelle",
+    description:
+      "Un déjeuner avec les fondateurs. C'est le moment privilégié pour prendre des nouvelles de Ctrl Up, de nous dire comment se passe ta mission, de nous parler des difficultés que tu rencontres ou de tes derniers succès.",
+  },
+  {
+    emoji: "🤖",
+    title: "Journées Tech",
+    description:
+      "Un rendez-vous bimestriel où la communauté se réunit pour faire de la veille, échanger sur les métiers, se former, réaliser des ateliers et des projets...",
+  },
+  {
+    emoji: "🎉",
+    title: "La veillée",
+    description:
+      "Nous nous réunirons une fois par mois pour nous retrouver autour d’activités sportive ou culturelle animée par un professionnel ou par un membre de la communauté.",
+  },
+];
+
+function Rituals() {
+  const theme = useTheme();
+  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  if (isLarge) {
+    return (
+      <Box
+        display="flex"
+        flexDirection="row"
+        sx={{
+          overflowX: "scroll",
+          "::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
+      >
+        {rituals.map((ritual) => (
+          <Card
+            key={ritual.emoji}
+            icon={<span role="img">{ritual.emoji}</span>}
+            title={ritual.title}
+            sx={{ minWidth: 320, marginLeft: 2, marginTop: 2 }}
+          >
+            <CardContent>
+              <Typography>{ritual.description}</Typography>
+            </CardContent>
+          </Card>
+        ))}
+      </Box>
+    );
+  }
+  return (
+    <Stack component="ul" spacing={2}>
+      {rituals.map((ritual) => (
+        <Box key={ritual.emoji} component="li">
+          <Typography fontWeight="bold" display="block">
+            <span role="img">{ritual.emoji}</span> {ritual.title}
+          </Typography>
+          <Typography>{ritual.description}</Typography>
+        </Box>
+      ))}
+    </Stack>
+  );
+}
 
 export default function Community() {
   const theme = useTheme();
@@ -118,85 +196,18 @@ export default function Community() {
       <Grid item md={12} lg={6}>
         <Typography variant="h2">Les rituels de la communauté</Typography>
       </Grid>
-      {isLarge && <Grid item xs />}
-      <Grid item md={12} lg={6}>
-        <Stack component="ul" spacing={2}>
-          <Box component="li">
-            <Typography fontWeight="bold" display="block">
-              <span role="img" aria-label="waving hand">
-                👋
-              </span>{" "}
-              Le point hebdo
-            </Typography>
-            <Typography>
-              Un débrief de 30 minutes pour suivre l'avancée des missions et se
-              souhaiter une bonne semaine.
-            </Typography>
-          </Box>
-          <Box component="li">
-            <Typography fontWeight="bold" display="block">
-              <span role="img" aria-label="cocktail">
-                🍹
-              </span>{" "}
-              Apér-eau du jeudi
-            </Typography>
-            <Typography>
-              À la débauche, on se retrouve pour partager un moment autour d'une
-              bière ou d'un thé. Gardons le contact autrement qu'avec Slack.
-            </Typography>
-          </Box>
-          <Box component="li">
-            <Typography fontWeight="bold" display="block">
-              <span role="img" aria-label="burger">
-                🍔
-              </span>{" "}
-              Ripaille mensuelle
-            </Typography>
-            <Typography>
-              Un déjeuner avec les fondateurs. C'est le moment privilégié pour
-              prendre des nouvelles de Ctrl Up, de nous dire comment se passe ta
-              mission, de nous parler des difficultés que tu rencontres ou de
-              tes derniers succès.
-            </Typography>
-          </Box>
-          <Box component="li">
-            <Typography fontWeight="bold" display="block">
-              <span role="img" aria-label="robot">
-                🤖
-              </span>{" "}
-              Journées Tech
-            </Typography>
-            <Typography>
-              Un rendez-vous bimestriel où la communauté se réunit pour faire de
-              la veille, échanger sur les métiers, se former, réaliser des
-              ateliers et des projets...
-            </Typography>
-          </Box>
-          <Box component="li">
-            <Typography fontWeight="bold" display="block">
-              <span role="img" aria-label="tada">
-                🎉
-              </span>{" "}
-              La veillée
-            </Typography>
-            <Typography>
-              Nous nous réunirons une fois par mois pour nous retrouver autour
-              d’activités sportive ou culturelle animée par un professionnel ou
-              par un membre de la communauté.
-            </Typography>
-          </Box>
-        </Stack>
-      </Grid>
       <Grid item md={12} lg={6}>
         <Box
           width="100%"
           height="auto"
-          mb={8}
           component="img"
           loading="lazy"
           src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/04%201%20(1).png?alt=media&token=802d4ccf-b4e8-4897-8195-d4ac9e3827ab"
           alt="team gathering"
         />
+      </Grid>
+      <Grid item xs={12}>
+        <Rituals />
       </Grid>
     </Grid>
   );
