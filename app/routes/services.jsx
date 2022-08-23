@@ -177,18 +177,16 @@ export default function Services() {
           travers le renforcement du réseau professionnel et l'attribution à des
           missions adéquates au profil.
         </Typography>
-        {isLarge && (
-          <Box pt={2}>
-            <Button
-              color="primary"
-              variant="contained"
-              component={Link}
-              to="/contact"
-            >
-              Contactez-nous
-            </Button>
-          </Box>
-        )}
+        <Box pt={2} display={{ xs: "none", lg: "block" }}>
+          <Button
+            color="primary"
+            variant="contained"
+            component={Link}
+            to="/contact"
+          >
+            Contactez-nous
+          </Button>
+        </Box>
       </Grid>
       <Grid item md={12} lg={4} width="100%">
         <Stack spacing={2}>
