@@ -20,7 +20,7 @@ export default function Contact() {
       <Typography variant="h2" mb={4}>
         Communiquons
       </Typography>
-      <Typography fontWeight={700} component="span">
+      <Typography fontWeight="bold" component="span">
         Ctrl Up, Écosystème Darwin
       </Typography>
       <Typography mb={1}>87 Quai des Queyries, Bordeaux</Typography>

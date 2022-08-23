@@ -43,12 +43,12 @@ export default function Team() {
             />
             <ImageListItemBar
               title={
-                <Typography variant="h4" fontWeight={700}>
+                <Typography variant="h4" fontWeight="bold">
                   {title}
                 </Typography>
               }
               subtitle={
-                <Typography variant="h6" fontSize={12} fontWeight={700}>
+                <Typography variant="h6" fontSize={12} fontWeight="bold">
                   {subtitle}
                 </Typography>
               }

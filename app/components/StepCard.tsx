@@ -22,7 +22,7 @@ export default function StepCard({
             <Icon color="action" />
           </Grid>
           <Grid item>
-            <Typography fontWeight={700} component="span">
+            <Typography fontWeight="bold" component="span">
               {title}
             </Typography>
           </Grid>

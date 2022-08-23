@@ -72,7 +72,7 @@ export default function Services() {
         {isLarge ? (
           <Typography variant="h3">Le cheminement</Typography>
         ) : (
-          <Typography variant="h5" fontWeight={700}>
+          <Typography variant="h5" fontWeight="bold">
             Le cheminement du développeur :
           </Typography>
         )}
