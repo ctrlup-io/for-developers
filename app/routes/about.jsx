@@ -23,19 +23,18 @@ export default function About() {
   const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <Grid container flexDirection="row" spacing={4}>
-      {isLarge && (
-        <Grid
-          item
-          xs={12}
-          position="absolute"
-          top={0}
-          right={0}
-          width="80%"
-          zIndex={-1}
-        >
-          <img src="topographicalLines2.svg" alt="topographical lines" />
-        </Grid>
-      )}
+      <Grid
+        item
+        xs={12}
+        display={{ xs: "none", lg: "block" }}
+        position="absolute"
+        top={0}
+        right={0}
+        width="80%"
+        zIndex={-1}
+      >
+        <img src="topographicalLines2.svg" alt="topographical lines" />
+      </Grid>
       <Grid item xs={12}>
         <Title variant="h2" stainIndex={0}>
           Une histoire d’humains
@@ -113,19 +112,18 @@ export default function About() {
           Humaniser le développement en régie
         </Typography>
       </Grid>
-      {isLarge && (
-        <Grid
-          item
-          xs={12}
-          position="absolute"
-          top={1100}
-          right={0}
-          width="20%"
-          zIndex={-1}
-        >
-          <img src="topographicalLines3.svg" alt="topographical lines" />
-        </Grid>
-      )}
+      <Grid
+        item
+        xs={12}
+        display={{ xs: "none", lg: "block" }}
+        position="absolute"
+        top={1100}
+        right={0}
+        width="20%"
+        zIndex={-1}
+      >
+        <img src="topographicalLines3.svg" alt="topographical lines" />
+      </Grid>
       <Grid item xs={12}>
         <Typography>
           L'idée est de trouver un modèle différent, innover pour améliorer le
