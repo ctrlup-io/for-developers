@@ -1,3 +1,18 @@
+# [1.16.0](https://github.com/ctrlup-io/for-developers/compare/v1.15.2...v1.16.0) (2022-08-23)
+
+
+### Bug Fixes
+
+* 🐛 "bold" font weight from mui theme ([84674b1](https://github.com/ctrlup-io/for-developers/commit/84674b1935f8581b675207d5a87ebabb8097a3cc))
+* 🐛 main behind footer ([9c341c2](https://github.com/ctrlup-io/for-developers/commit/9c341c20acde11a7c1c12af1fae6e884ef4f59f8))
+* 🐛 use `display` prop to hide some elements ([c04f5f9](https://github.com/ctrlup-io/for-developers/commit/c04f5f9fba7ea179274b7a263797e0498b08e377))
+
+
+### Features
+
+* 🎸 desktop version of "community" page ([b93c318](https://github.com/ctrlup-io/for-developers/commit/b93c318b64ea3e791e549c231a1b48fdbc44334e))
+* 🎸 ritual as card on desktop ([eaf87a1](https://github.com/ctrlup-io/for-developers/commit/eaf87a1d274104614f4e74f8e69c398d1a79f34e))
+
 ## [1.15.2](https://github.com/ctrlup-io/for-developers/compare/v1.15.1...v1.15.2) (2022-08-19)
 
 
