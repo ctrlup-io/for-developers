@@ -227,7 +227,7 @@ export default function Services() {
         position="relative"
       >
         <Box
-          alt="hiking-together"
+          alt="summit-together"
           component="img"
           loading="lazy"
           position="absolute"
