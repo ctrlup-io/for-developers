@@ -36,6 +36,12 @@ const images = [
     isLarge: true,
   },
   {
+    url: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/teamatchantier_small.jpg?alt=media&token=b9d4bdea-2657-4215-bb30-b88d2f01934b",
+    title: "team at chantier de la garonne",
+    isLarge: true,
+    cols: 2,
+  },
+  {
     url: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/unsplash_iuqmGmst5Po%20(2).png?alt=media&token=e3d20d94-6074-4a4a-b79f-3dec112745bc",
     title: "team at restaurant",
     isLarge: false,
@@ -125,17 +131,21 @@ export default function Community() {
   const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <Grid container flexDirection="row" spacing={4} flexWrap="wrap">
-      {isLarge && (
-        <Grid item lg={6} position="relative" minHeight={440}>
-          <Box
-            alt="climbing"
-            component="img"
-            loading="lazy"
-            width="100%"
-            src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/climbing.png?alt=media&token=fd20f574-7d4f-44f2-9641-bd99675435b4"
-          />
-        </Grid>
-      )}
+      <Grid
+        display={{ xs: "none", lg: "block" }}
+        item
+        lg={6}
+        position="relative"
+        minHeight={440}
+      >
+        <Box
+          alt="climbing"
+          component="img"
+          loading="lazy"
+          width="100%"
+          src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/climbing.png?alt=media&token=fd20f574-7d4f-44f2-9641-bd99675435b4"
+        />
+      </Grid>
       <Grid item md={12} lg={6} container spacing={4}>
         <Grid item xs={12}>
           <Title variant="h2" stainIndex={2}>

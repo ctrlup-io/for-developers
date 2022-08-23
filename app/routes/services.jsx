@@ -52,22 +52,26 @@ export default function Services() {
           l'arrivée d'un développeur à son ascension vers la séniorité.
         </Typography>
       </Grid>
-      {isLarge && (
-        <Grid item lg={8} position="relative" minHeight={440}>
-          <Box
-            alt="hiking-together"
-            component="img"
-            loading="lazy"
-            xs={12}
-            position="absolute"
-            top={0}
-            right={0}
-            zIndex={-1}
-            width="100%"
-            src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/hiking-together.png?alt=media&token=04f84511-c33b-41b0-a4ee-a91f29784078"
-          />
-        </Grid>
-      )}
+      <Grid
+        item
+        lg={8}
+        display={{ xs: "none", lg: "block" }}
+        position="relative"
+        minHeight={440}
+      >
+        <Box
+          alt="hiking-together"
+          component="img"
+          loading="lazy"
+          xs={12}
+          position="absolute"
+          top={0}
+          right={0}
+          zIndex={-1}
+          width="100%"
+          src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/hiking-together.png?alt=media&token=04f84511-c33b-41b0-a4ee-a91f29784078"
+        />
+      </Grid>
       <Grid item xs={12}>
         {isLarge ? (
           <Typography variant="h3">Le cheminement</Typography>
@@ -133,30 +137,29 @@ export default function Services() {
           </StepCard>
         </Grid>
       </Grid>
-      {isLarge && (
-        <Grid
-          item
-          xs={12}
-          position="relative"
-          sx={{ marginBottom: 24, marginTop: 16 }}
-        >
-          <Box
-            component="img"
-            src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/largelandscape.png?alt=media&token=a6cbca2b-f5e0-433a-9cde-059c1d13bdf1"
-            alt="moutains by night landscape"
-            width="100%"
-          />
-          <Box
-            component="img"
-            src="topographicalLines4.svg"
-            alt="topographical lines"
-            position="absolute"
-            zIndex={-1}
-            right={0}
-            width="100%"
-          />
-        </Grid>
-      )}
+      <Grid
+        item
+        xs={12}
+        display={{ xs: "none", lg: "block" }}
+        position="relative"
+        sx={{ marginBottom: 24, marginTop: 16 }}
+      >
+        <Box
+          component="img"
+          src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/largelandscape.png?alt=media&token=a6cbca2b-f5e0-433a-9cde-059c1d13bdf1"
+          alt="moutains by night landscape"
+          width="100%"
+        />
+        <Box
+          component="img"
+          src="topographicalLines4.svg"
+          alt="topographical lines"
+          position="absolute"
+          zIndex={-1}
+          right={0}
+          width="100%"
+        />
+      </Grid>
       <Grid item md={12} lg={8}>
         <Typography variant="h3">
           Des avantages pour grimper plus haut
@@ -219,34 +222,35 @@ export default function Services() {
           </CollapseCard>
         </Stack>
       </Grid>
-      {isLarge && (
-        <Grid item lg={8} position="relative">
-          <Box
-            alt="hiking-together"
-            component="img"
-            loading="lazy"
-            position="absolute"
-            left={32}
-            bottom={0}
-            zIndex={-1}
-            width="80%"
-            src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/summit-together.png?alt=media&token=9dbd70e1-6409-4fd3-9f55-9e01011115eb"
-          />
-        </Grid>
-      )}
-      {!isLarge && (
-        <Grid item xs={12}>
-          <Button
-            color="primary"
-            variant="contained"
-            component={Link}
-            fullWidth
-            to="/contact"
-          >
-            Contactez-nous
-          </Button>
-        </Grid>
-      )}
+      <Grid
+        item
+        lg={8}
+        display={{ xs: "none", lg: "block" }}
+        position="relative"
+      >
+        <Box
+          alt="hiking-together"
+          component="img"
+          loading="lazy"
+          position="absolute"
+          left={32}
+          bottom={0}
+          zIndex={-1}
+          width="80%"
+          src="https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/summit-together.png?alt=media&token=9dbd70e1-6409-4fd3-9f55-9e01011115eb"
+        />
+      </Grid>
+      <Grid item xs={12} display={{ xs: "block", lg: "none" }}>
+        <Button
+          color="primary"
+          variant="contained"
+          component={Link}
+          fullWidth
+          to="/contact"
+        >
+          Contactez-nous
+        </Button>
+      </Grid>
     </Grid>
   );
 }

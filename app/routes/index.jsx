@@ -14,19 +14,18 @@ export default function Index() {
   const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <Grid container>
-      {isLarge && (
-        <Grid
-          item
-          xs={12}
-          position="absolute"
-          top={0}
-          right={0}
-          width="80%"
-          zIndex={-1}
-        >
-          <img src="topographicalLines1.svg" alt="topographical lines" />
-        </Grid>
-      )}
+      <Grid
+        item
+        xs={12}
+        display={{ xs: "none", lg: "block" }}
+        position="absolute"
+        top={0}
+        right={0}
+        width="80%"
+        zIndex={-1}
+      >
+        <img src="topographicalLines1.svg" alt="topographical lines" />
+      </Grid>
       <Grid item xs={12}>
         <Typography variant="h5">Ctrl Up, une ESN singulière.</Typography>
       </Grid>
