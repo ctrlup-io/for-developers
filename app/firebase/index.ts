@@ -13,5 +13,3 @@ const app =
 const db = getFirestore(app);
 
 export { app, db };
-export { default as getJob } from "./getJob";
-export { default as getJobs } from "./getJobs";

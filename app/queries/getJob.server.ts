@@ -1,7 +1,9 @@
-import getAll from "./getAll";
-import getOne from "./getOne";
-import type { Job } from "./parseJob";
+import getAll from "../firebase/getAll";
+import getOne from "../firebase/getOne";
 import parseJob from "./parseJob";
+
+import type { Job } from "./types";
+import type { Document } from "../firebase/types";
 
 export default async function getJob(id: string) {
   const [seniorityLevels, skills, job] = (
@@ -11,5 +13,9 @@ export default async function getJob(id: string) {
       getOne("jobs", id),
     ])
   ).map((result) => (result.status === "fulfilled" ? result.value : []));
-  return parseJob({ skills, seniorityLevels })(job as Job);
+  return parseJob(
+    job as Job,
+    skills as Document[],
+    seniorityLevels as Document[]
+  );
 }
