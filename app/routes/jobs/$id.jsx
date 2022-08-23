@@ -3,7 +3,7 @@ import { Typography, Button, Link, Grid, Chip } from "@mui/material";
 import { useLoaderData } from "@remix-run/react";
 import { json } from "@remix-run/node";
 
-import { getJob } from "../../firebase";
+import getJob from "../../queries/getJob.server";
 
 export function meta({ data }) {
   return {

@@ -4,7 +4,8 @@ import { json } from "@remix-run/node";
 import { Title } from "@ctrlup/rainbow-react";
 
 import Job from "../../components/Job";
-import { getJobs } from "../../firebase";
+
+import getJobs from "../../queries/getJobs.server";
 
 export function meta() {
   return {
