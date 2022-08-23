@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/ctrlup-io/for-developers/compare/v1.16.0...v1.16.1) (2022-08-23)
+
+
+### Bug Fixes
+
+* 🐛 use `display` prop to hide <Box> elements ([222e97a](https://github.com/ctrlup-io/for-developers/commit/222e97aee86cec1f455e61097bf52726c1dc298b))
+
 # [1.16.0](https://github.com/ctrlup-io/for-developers/compare/v1.15.2...v1.16.0) (2022-08-23)
 
 
