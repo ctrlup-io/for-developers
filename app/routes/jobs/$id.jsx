@@ -63,19 +63,19 @@ export default function Job() {
       </Grid>
       <Typography color="text.secondary">
         Télétravail :{" "}
-        <Typography component="span" fontWeight={700}>
+        <Typography component="span" fontWeight="bold">
           {data.remote ? "Oui" : "Non"}
         </Typography>
       </Typography>
       <Typography color="text.secondary">
         Début :{" "}
-        <Typography component="span" fontWeight={700}>
+        <Typography component="span" fontWeight="bold">
           {new Intl.DateTimeFormat("fr-FR", {}).format(data.startingDate)}
         </Typography>
       </Typography>
       <Typography color="text.secondary" mb={4}>
         Lieu :{" "}
-        <Typography component="span" fontWeight={700}>
+        <Typography component="span" fontWeight="bold">
           {data.location}
         </Typography>
       </Typography>
@@ -84,7 +84,7 @@ export default function Job() {
         Description
       </Typography>
       <Typography mb={2}>
-        <Typography fontWeight={700} component="span">
+        <Typography fontWeight="bold" component="span">
           En tant que membre de l'équipe de développement de Ctrl Up
         </Typography>{" "}
         tu participes activement à la communauté technique en partageant des
@@ -93,7 +93,7 @@ export default function Job() {
       </Typography>
       <Typography mb={2}>
         Tu es en{" "}
-        <Typography fontWeight={700} component="span">
+        <Typography fontWeight="bold" component="span">
           contact direct avec nos clients et intègres des équipes produit
         </Typography>{" "}
         ou projet dans le cadre de missions d'assistance technique ou au
@@ -105,7 +105,7 @@ export default function Job() {
         et transparente.
       </Typography>
       <Typography mb={2}>
-        <Typography fontWeight={700} component="span">
+        <Typography fontWeight="bold" component="span">
           En tant que membre d'une équipe d'une développement tu :
         </Typography>
       </Typography>
@@ -121,7 +121,7 @@ export default function Job() {
       </Typography>
       <Typography mb={2}>
         Concernant ta rémunération nous suivons{" "}
-        <Typography fontWeight={700} component="span">
+        <Typography fontWeight="bold" component="span">
           une grille de salaires simplifiée basée sur ton niveau d'expérience
         </Typography>{" "}
         avec un bonus de 5 K€ si tu es "confirmé" ou "senior" avec des
@@ -135,7 +135,7 @@ export default function Job() {
       </Typography>
       <Typography mb={2}>
         Tu es sous un{" "}
-        <Typography fontWeight={700} component="span">
+        <Typography fontWeight="bold" component="span">
           contrat-cadre de 39 heures en CDI
         </Typography>{" "}
         régi par la{" "}
@@ -172,18 +172,18 @@ export default function Job() {
       </Typography>
       <Typography mb={2}>
         Tu participes à{" "}
-        <Typography fontWeight={700} component="span">
+        <Typography fontWeight="bold" component="span">
           minimum 5 jours de formation
         </Typography>{" "}
         par an ainsi qu'aux{" "}
-        <Typography fontWeight={700} component="span">
+        <Typography fontWeight="bold" component="span">
           journées Tech tous les deux mois
         </Typography>
         .
       </Typography>
       <Typography mb={4}>
         Sans oublier l'indispensable :{" "}
-        <Typography fontWeight={700} component="span">
+        <Typography fontWeight="bold" component="span">
           ton outil de travail
         </Typography>
         . Tu reçois un ordinateur portable te permettant de réaliser tous tes
