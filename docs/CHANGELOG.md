@@ -1,3 +1,16 @@
+# [1.18.0](https://github.com/ctrlup-io/for-developers/compare/v1.17.0...v1.18.0) (2022-08-29)
+
+
+### Bug Fixes
+
+* 🐛 get jobs only on server-side ([62dadc6](https://github.com/ctrlup-io/for-developers/commit/62dadc661f3e3e13b6d6843825390c9804d3f07b))
+
+
+### Features
+
+* 🎸 job page on desktop ([95e9340](https://github.com/ctrlup-io/for-developers/commit/95e934002639143d0baf76eb3d81e01d61b829ac))
+* 🎸 jobs page on desktop ([7856679](https://github.com/ctrlup-io/for-developers/commit/78566797c637e778bd04dc04c6a427b60f3678c0))
+
 # [1.17.0](https://github.com/ctrlup-io/for-developers/compare/v1.16.1...v1.17.0) (2022-08-23)
 
 
