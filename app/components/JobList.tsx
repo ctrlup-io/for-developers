@@ -1,12 +1,11 @@
-import { Box, Stack, useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { Box, Stack } from "@mui/material";
 
 import type { JobProps } from "./Job";
 import Job from "./Job";
+import useIsLargeScreen from "../styles/useIsLargeScreen";
 
 export default function JobList({ data }: { data: JobProps[] }) {
-  const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLarge = useIsLargeScreen();
   if (!data?.length) return null;
   if (isLarge) {
     return (

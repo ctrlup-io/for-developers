@@ -4,13 +4,13 @@ import {
   ImageList,
   ImageListItem,
   Button,
-  useMediaQuery,
   Grid,
   Stack,
 } from "@mui/material";
 import { Link } from "@remix-run/react";
 import { CollapseCard, Title } from "@ctrlup/rainbow-react";
-import { useTheme } from "@mui/material/styles";
+
+import useIsLargeScreen from "../styles/useIsLargeScreen";
 
 export function meta() {
   return {
@@ -19,8 +19,7 @@ export function meta() {
 }
 
 export default function About() {
-  const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLarge = useIsLargeScreen();
   return (
     <Grid container flexDirection="row" spacing={4}>
       <Grid

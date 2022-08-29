@@ -1,17 +1,10 @@
 import { colors } from "@ctrlup/rainbow-react";
-import {
-  Typography,
-  Button,
-  Link,
-  Grid,
-  Chip,
-  useMediaQuery,
-} from "@mui/material";
+import { Typography, Button, Link, Grid, Chip } from "@mui/material";
 import { useLoaderData } from "@remix-run/react";
 import { json } from "@remix-run/node";
-import { useTheme } from "@mui/material/styles";
 
 import getJob from "../../queries/getJob.server";
+import useIsLargeScreen from "../../styles/useIsLargeScreen";
 
 export function meta({ data }) {
   return {
@@ -25,8 +18,7 @@ export async function loader({ params }) {
 }
 
 export default function Job() {
-  const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLarge = useIsLargeScreen();
   const data = useLoaderData();
   if (!data) return null;
   const applyButton = (

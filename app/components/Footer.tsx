@@ -1,12 +1,12 @@
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
 import { DiscordIcon, NpmIcon } from "@ctrlup/rainbow-react";
-import { useTheme } from "@mui/material/styles";
 
 import NavList from "./NavList";
 import NavListItem from "./NavListItem";
 import NavIconList from "./NavIconList";
 import NavIconListItem from "./NavIconListItem";
+import useIsLargeScreen from "../styles/useIsLargeScreen";
 
 const socialNav = (
   <NavIconList>
@@ -49,8 +49,7 @@ const teamDedication = (
 );
 
 function Footer() {
-  const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLarge = useIsLargeScreen();
 
   const mainNav = (
     <NavList fullWidth={!isLarge}>

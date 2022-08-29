@@ -5,14 +5,13 @@ import {
   ImageListItem,
   ImageListItemBar,
   Card,
-  useMediaQuery,
   Grid,
 } from "@mui/material";
 import { Link, useLoaderData } from "@remix-run/react";
-import { useTheme } from "@mui/material/styles";
 import { colors } from "@ctrlup/rainbow-react";
 
 import getMembers from "../queries/getMembers.server";
+import useIsLargeScreen from "../styles/useIsLargeScreen";
 
 export function meta() {
   return {
@@ -28,8 +27,7 @@ export async function loader() {
 
 export default function Team() {
   const data = useLoaderData();
-  const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLarge = useIsLargeScreen();
   return (
     <Grid container flexDirection="row" spacing={4}>
       <Grid
@@ -94,7 +92,6 @@ export default function Team() {
                   WebkitTextFillColor: "transparent",
                   MozTextFillColor: "transparent",
                   textAlign: "center",
-                  fontSize: theme.typography.h4.fontSize,
                 }}
               >
                 Deviens le prochain ou la prochaine, rejoins-nous !

@@ -1,5 +1,4 @@
-import { Button, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { Button, Grid, Stack, Typography } from "@mui/material";
 import {
   colors,
   Title,
@@ -12,6 +11,7 @@ import {
 import { Box } from "@mui/system";
 
 import StepCard from "../components/StepCard";
+import useIsLargeScreen from "../styles/useIsLargeScreen";
 import { Link } from "@remix-run/react";
 
 export function meta() {
@@ -21,8 +21,7 @@ export function meta() {
 }
 
 export default function Services() {
-  const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLarge = useIsLargeScreen();
   return (
     <Grid container flexDirection="row" spacing={4} flexWrap="wrap">
       <Grid item xs={12}>
