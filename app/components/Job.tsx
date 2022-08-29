@@ -10,6 +10,8 @@ import {
 } from "@mui/material";
 import { Link } from "@remix-run/react";
 
+import type { CardProps } from "@mui/material";
+
 export default function Job({
   id,
   title,
@@ -17,10 +19,16 @@ export default function Job({
   experience,
   salary,
   description,
-}: JobProps) {
+  ...props
+}: CardProps & JobProps) {
   return (
-    <Card icon={<EmailOutlined color="action" />} title={title}>
-      <CardContent sx={{ pt: 2 }}>
+    <Card
+      icon={<EmailOutlined color="action" />}
+      title={title}
+      {...props}
+      sx={{ ...props.sx, display: "flex", flexDirection: "column" }}
+    >
+      <CardContent sx={{ pt: 2, flexGrow: 1 }}>
         <Grid container spacing={1} mb={1}>
           <Grid item>
             <Chip label={`${experience} xp`} />
@@ -47,12 +55,11 @@ export default function Job({
   );
 }
 
-type JobProps = {
+export type JobProps = {
   id: string;
   title: string;
   description: string;
   experience: number;
   salary: number;
   mainSkills: string[];
-  completeSkills: string[];
 };

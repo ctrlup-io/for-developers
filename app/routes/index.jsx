@@ -13,7 +13,7 @@ export default function Index() {
   const theme = useTheme();
   const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   return (
-    <Grid container>
+    <Grid container spacing={4}>
       <Grid
         item
         xs={12}
@@ -30,7 +30,7 @@ export default function Index() {
         <Typography variant="h5">Ctrl Up, une ESN singulière.</Typography>
       </Grid>
       <Grid item xs={isLarge ? 6 : 12} width="100%">
-        <Typography variant="h1" mb={4}>
+        <Typography variant="h1">
           <Box component="span" display="inline-flex" flexDirection="column">
             Forge <Stain index={2} />
           </Box>{" "}
@@ -52,7 +52,7 @@ export default function Index() {
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        <Typography mb={4} maxWidth="sm" lineHeight={2}>
+        <Typography maxWidth="sm" lineHeight={2}>
           Apporte de la valeur à ton rôle de développeur, prend de la hauteur
           dans le métier et grimpe en équipe. Notre crédo ? Échanger et partager
           pour évoluer ensemble.
