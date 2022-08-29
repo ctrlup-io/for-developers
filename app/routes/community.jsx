@@ -5,14 +5,14 @@ import {
   Grid,
   Typography,
   Link as MuiLink,
-  useMediaQuery,
   ImageList,
   ImageListItem,
   Stack,
   CardContent,
 } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import { Link } from "@remix-run/react";
+
+import useIsLargeScreen from "../styles/useIsLargeScreen";
 
 export function meta() {
   return {
@@ -83,8 +83,7 @@ const rituals = [
 ];
 
 function Rituals() {
-  const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLarge = useIsLargeScreen();
   if (isLarge) {
     return (
       <Box
@@ -127,8 +126,7 @@ function Rituals() {
 }
 
 export default function Community() {
-  const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLarge = useIsLargeScreen();
   return (
     <Grid container flexDirection="row" spacing={4} flexWrap="wrap">
       <Grid

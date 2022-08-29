@@ -1,7 +1,8 @@
-import { Box, Button, Typography, useMediaQuery, Grid } from "@mui/material";
+import { Box, Button, Typography, Grid } from "@mui/material";
 import { colors, Stain } from "@ctrlup/rainbow-react";
-import { useTheme } from "@mui/material/styles";
 import { Link } from "@remix-run/react";
+
+import useIsLargeScreen from "../styles/useIsLargeScreen";
 
 export function meta() {
   return {
@@ -10,8 +11,7 @@ export function meta() {
 }
 
 export default function Index() {
-  const theme = useTheme();
-  const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
+  const isLarge = useIsLargeScreen();
   return (
     <Grid container spacing={4}>
       <Grid
