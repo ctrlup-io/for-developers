@@ -8,13 +8,34 @@ import {
   Stack,
   useMediaQuery,
 } from "@mui/material";
-import { useLoaderData } from "@remix-run/react";
+import { Form, useLoaderData, useTransition } from "@remix-run/react";
 import { useTheme } from "@mui/material/styles";
+import { useRef, useEffect } from "react";
+import { json } from "@remix-run/node";
+
+import sendMail from "../mutations/sendMail.server";
 
 export function meta() {
   return {
     title: "Contact",
   };
+}
+
+const contactEmail = "contact@ctrlup.io";
+
+export async function action({ request }) {
+  const formData = await request.formData();
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const message = formData.get("message");
+  if (!name.length > 0 || !email.length > 0 || !message.length > 0) return null;
+  const mail = await sendMail({
+    from: `${name} <${email}>`,
+    to: `Ctrl Up <${contactEmail}>`,
+    subject: "Hello Ctrl Up ! 👋",
+    text: message,
+  });
+  return json(mail);
 }
 
 export async function loader() {
@@ -27,33 +48,55 @@ export default function Contact() {
   const theme = useTheme();
   const isLarge = useMediaQuery(theme.breakpoints.up("lg"));
   const data = useLoaderData();
+  const transition = useTransition();
+  const formRef = useRef();
+  const isSending = transition.state === "submitting";
+  const disabled = isSending;
+  useEffect(() => {
+    if (!isSending) {
+      formRef.current?.reset();
+    }
+  }, [isSending]);
   return (
     <Grid container flexDirection="row" spacing={4}>
       <Grid item xs={12}>
         <Typography variant="h2">Communiquons</Typography>
       </Grid>
       <Grid item md={12} lg={6}>
-        <Stack spacing={2} component="form" noValidate autoComplete="off">
+        <Stack
+          spacing={2}
+          component={Form}
+          method="post"
+          noValidate
+          ref={formRef}
+        >
           <Typography>
             Vous souhaitez entrer en contact avec notre équipe ? Laissez nous un
             petit mot et nous vous répondons au plus vite.
           </Typography>
-          <TextField label="Nom" />
-          <TextField label="Adresse mail" />
-          <TextField label="Téléphone" />
-          <TextField label="Message" multiline minRows={7} />
+          <TextField id="name" name="name" label="Nom" />
+          <TextField id="email" name="email" label="Adresse mail" />
+          <TextField
+            id="message"
+            name="message"
+            label="Message"
+            multiline
+            minRows={7}
+          />
+          <Button
+            color="primary"
+            variant="contained"
+            fullWidth={!isLarge}
+            sx={{ mt: 2 }}
+            type="submit"
+            disabled={disabled}
+          >
+            {isSending ? "Envoi du message..." : "Envoyer le message"}
+          </Button>
         </Stack>
-        <Button
-          color="primary"
-          variant="contained"
-          fullWidth={!isLarge}
-          sx={{ mt: 2 }}
-        >
-          Envoyer le message
-        </Button>
         <Typography mt={2}>
           Ou nous contacter à{" "}
-          <Link href="mailto:contact@ctrlup.io">contact@ctrlup.io</Link>
+          <Link href={`mailto:${contactEmail}`}>{contactEmail}</Link>
         </Typography>
       </Grid>
       <Grid item lg={6} display={{ xs: "none", lg: "block" }}>
