@@ -6,11 +6,6 @@ export type Member = {
 
 const members: Member[] = [
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/ashwini-chaudhary-qBmvwGsxqlc-unsplash%20(1).jpg?alt=media&token=7c86fe70-0a58-48c6-ae72-6e4f355f82b3",
-    title: "Alexandre E.",
-    subtitle: "Développeur",
-  },
-  {
     src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/portrait-of-smiling-female-hiker-holding-hiking-stick-looking-at-camera%20(1).jpg?alt=media&token=043c6a31-6738-4b5b-a14a-1ddf88d40ef4",
     title: "Amandine B.",
     subtitle: "Test Manager",
@@ -21,12 +16,7 @@ const members: Member[] = [
     subtitle: "Développeuse",
   },
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/original_d78fcd40-815a-48d0-bb7f-7b2f5750d7f9_IMG_20211217_140752_Bokeh_2.jpg?alt=media&token=dae30b21-ccdd-4908-861f-030201b4fbf6",
-    title: "Cynthia V.",
-    subtitle: "Développeuse",
-  },
-  {
-    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/ashwini-chaudhary-qBmvwGsxqlc-unsplash%20(1).jpg?alt=media&token=7c86fe70-0a58-48c6-ae72-6e4f355f82b3",
+    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/darryl.png?alt=media&token=aa530810-0800-496c-8c74-799cf8b30303",
     title: "Darryl N.",
     subtitle: "Développeur",
   },
@@ -36,9 +26,19 @@ const members: Member[] = [
     subtitle: "Directeur Général",
   },
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/portrait-of-smiling-female-hiker-holding-hiking-stick-looking-at-camera%20(1).jpg?alt=media&token=043c6a31-6738-4b5b-a14a-1ddf88d40ef4",
+    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/lea.png?alt=media&token=f04f0825-14dd-4cca-a6e4-df4f3c3d5dea",
     title: "Léa E.",
     subtitle: "Développeuse",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/maelle.png?alt=media&token=7b802371-5329-464a-a90f-38c1670a8594",
+    title: "Maëlle H.",
+    subtitle: "Business et Team Manager",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/ashwini-chaudhary-qBmvwGsxqlc-unsplash%20(1).jpg?alt=media&token=7c86fe70-0a58-48c6-ae72-6e4f355f82b3",
+    title: "Maxime F.",
+    subtitle: "Développeur",
   },
   {
     src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/original_28152831-3700-44e8-92ae-527759af7f29_IMG_20211217_140837_Bokeh_2.jpg?alt=media&token=7b147186-73c4-4b12-8743-2362f26a3d07",
@@ -66,7 +66,7 @@ const members: Member[] = [
     subtitle: "Développeur",
   },
   {
-    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/ashwini-chaudhary-qBmvwGsxqlc-unsplash%20(1).jpg?alt=media&token=7c86fe70-0a58-48c6-ae72-6e4f355f82b3",
+    src: "https://firebasestorage.googleapis.com/v0/b/developer-website-6b974.appspot.com/o/victor.png?alt=media&token=db31de3f-c4e2-4e86-8fd8-833d4062252a",
     title: "Victor A.",
     subtitle: "Développeur",
   },
