@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/ctrlup-io/for-developers/compare/v1.18.0...v1.19.0) (2022-11-17)
+
+
+### Features
+
+* 🎸 new team members and pictures ([68447d4](https://github.com/ctrlup-io/for-developers/commit/68447d44a08751873576b835da5c82957df345c5))
+
 # [1.18.0](https://github.com/ctrlup-io/for-developers/compare/v1.17.0...v1.18.0) (2022-08-29)
 
 
