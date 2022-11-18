@@ -32,7 +32,7 @@ export default function Services() {
       <Grid item md={12} lg={4}>
         <Typography>
           Au même titre que les ESN, mais en beaucoup mieux, nous apportons
-          plusieurs choses aux développeurs de la{" "}
+          plusieurs choses aux développeurs de l'{" "}
           <Typography
             sx={{
               background: colors.RAINBOW,
@@ -45,9 +45,9 @@ export default function Services() {
             }}
             component="span"
           >
-            communauté
+            équipe
           </Typography>
-          . D'abord, Ctrl Up propose un modèle fondé sur quatre étapes, de
+          . D'abord, Ctrl Up propose une évolution sur quatre étapes, de
           l'arrivée d'un développeur à son ascension vers la séniorité.
         </Typography>
       </Grid>
@@ -102,7 +102,7 @@ export default function Services() {
             sx={{ height: "100%" }}
           >
             <Typography>
-              Les responsables de Ctrl Up s'occupent de trouver la mission
+              L'équipe opérationnelle de Ctrl Up s'occupe de trouver la mission
               adéquate, celle en accord avec les valeurs et compétences de
               chaque développeur.
             </Typography>
@@ -116,8 +116,8 @@ export default function Services() {
             sx={{ height: "100%" }}
           >
             <Typography>
-              De la formation continue et de la montée en compétences, en code,
-              en soft skills ou en personal branding.
+              De la formation continue et de la montée en compétences,
+              techniques, en soft skills ou en personal branding.
             </Typography>
           </StepCard>
         </Grid>{" "}
@@ -131,7 +131,7 @@ export default function Services() {
             <Typography>
               Tout au long de son ascension, les développeurs profitent
               d'évènements communautaires réguliers, pour maintenir un lien fort
-              entre collaborateurs et profiter d'un esprit de famille.
+              entre membre de l'équipe et aller plus haut tous ensemble.
             </Typography>
           </StepCard>
         </Grid>
@@ -191,30 +191,27 @@ export default function Services() {
         <Stack spacing={2}>
           <CollapseCard defaultExpanded={isLarge} title="Aventure humaine">
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
-              senectus pellentesque quam sed tellus, sapien non, scelerisque.
-              Ullamcorper quam odio a quam in.
+              Nous rejoindre c'est s'engager humainement dans le projet Ctrl Up
+              et au sein des communautés.
             </Typography>
           </CollapseCard>
           <CollapseCard defaultExpanded={isLarge} title="Progression rapide">
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
-              senectus pellentesque quam sed tellus, sapien non, scelerisque.
-              Ullamcorper quam odio a quam in.
+              Nous créons et animons des espaces propices au partage de
+              connaissance pour favoriser l'apprentissage avec les pairs.
             </Typography>
           </CollapseCard>
           <CollapseCard defaultExpanded={isLarge} title="Mission adéquate">
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
-              senectus pellentesque quam sed tellus, sapien non, scelerisque.
-              Ullamcorper quam odio a quam in.
+              Ensemble nous dessinons un plan de carrière. Les missions et
+              projets de nos clients sont un moyen pour s'épanouir dans son
+              métier et enrichir ses connaissances.
             </Typography>
           </CollapseCard>
           <CollapseCard defaultExpanded={isLarge} title="Réseau consolidé">
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
-              senectus pellentesque quam sed tellus, sapien non, scelerisque.
-              Ullamcorper quam odio a quam in.
+              Nous entretenons des relations sincères et pérennes auprès de nos
+              clients, équipiers, et communautés.
             </Typography>
           </CollapseCard>
         </Stack>
