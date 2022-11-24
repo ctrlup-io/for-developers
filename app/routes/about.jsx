@@ -59,16 +59,15 @@ export default function About() {
           <Typography>
             En 2018, Kevin bosse dans une ESN et fait un constat inquiétant.
             Dans son entreprise, le manque de développeurs se fait sentir.
-            Difficile d'attirer de nouveau talents, les projets ralentissent. Il
-            faut trouver une solution, mais surtout comprendre pourquoi on en
-            arrive là.
+            Difficile d'attirer de nouveaux talents, les projets ralentissent.
+            Il faut comprendre les raisons de cette situation et y remédier.
           </Typography>
           <Typography>
             De son côté, Valentin travaille avec les développeurs d'une grande
             entreprise de la tech. Il les forme, les accompagne, et développe un
             maximum d'outils pour les aider dans leur quotidien. Pédagogue et
-            empathique, il comprend peu à peu que beaucoup de développeurs sont
-            frustrés voir épuisés.
+            empathique, il comprend peu à peu qu'une partie des développeurs
+            employés par des ESN sont frustrés voir épuisés.
           </Typography>
           <ImageList cols={2} gap={16}>
             {[
@@ -82,11 +81,11 @@ export default function About() {
           </ImageList>
           <Typography>
             Autour d'une discussion, les deux amis explorent les raisons qui
-            démontrent les limites des ESN à grande échelle : solitude, manque
+            démontrent les limites de certains modèles d'ESN : solitude, manque
             de reconnaissance, missions inadaptées, stagnation des compétences,
             manque d'accompagnement...
             <br />
-            Les développeurs envoyés en régie sont isolées. Il faut y remédier.
+            Les développeurs sont isolées chez le client. Il faut y remédier.
           </Typography>
         </Stack>
       </Grid>
@@ -152,9 +151,8 @@ export default function About() {
         <Stack spacing={4}>
           <Typography>
             C'est parce que nous sommes nous-même empathiques et bienveillants
-            qu'on y croit fermement. C'est en répandant des ondes positives de
-            partage et de transmission que nous pouvons tous évoluer,
-            constamment.
+            qu'on y croit fermement. C'est en créant un espace de partage et de
+            transmission que nous pouvons tous évoluer, constamment.
           </Typography>
           <Typography>
             Pour monter toujours plus haut, nous avons décidé d'embarquer des
@@ -168,7 +166,7 @@ export default function About() {
           <CollapseCard defaultExpanded={isLarge} title="Bienveillance">
             <Typography>
               L'altruisme et le soin de l'autre sont des idées que nous aimons,
-              la base de nos relations sont fondées sur cette idée qu'il faut
+              la base de nos relations est fondée sur cette idée qu'il faut
               rester bienveillant au sein de la communauté.
             </Typography>
           </CollapseCard>
@@ -183,9 +181,9 @@ export default function About() {
           <CollapseCard defaultExpanded={isLarge} title="Pédagogie">
             <Typography>
               L'apprentissage permanent fait partie de notre registre, nous
-              croyons qu'on bon développeur est un développeur qui apprend sans
-              cesse, car les technologies évoluent rapidement et nécessite
-              d'assurer une veille constante.
+              croyons qu'un bon développeur est un développeur qui apprend sans
+              cesse, car les technologies et les besoins des utilisateurs
+              évoluent rapidement et nécessitent d'assurer une veille constante.
             </Typography>
           </CollapseCard>
           <CollapseCard defaultExpanded={isLarge} title="Partage">

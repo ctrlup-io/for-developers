@@ -47,7 +47,7 @@ export default function Index() {
             variant="h1"
             component="span"
           >
-            développeurs
+            développeur
           </Typography>
         </Typography>
       </Grid>
