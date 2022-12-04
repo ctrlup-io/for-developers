@@ -56,7 +56,7 @@ export default function Services() {
         lg={8}
         display={{ xs: "none", lg: "block" }}
         position="relative"
-        minHeight={440}
+        minHeight={500}
       >
         <Box
           alt="hiking-together"
@@ -107,7 +107,7 @@ export default function Services() {
               chaque développeur.
             </Typography>
           </StepCard>
-        </Grid>{" "}
+        </Grid>
         <Grid item md={12} lg={6}>
           <StepCard
             title="L’ascension"
@@ -120,7 +120,7 @@ export default function Services() {
               en soft skills ou en personal branding.
             </Typography>
           </StepCard>
-        </Grid>{" "}
+        </Grid>
         <Grid item md={12} lg={6}>
           <StepCard
             title="La cordée"
@@ -141,7 +141,8 @@ export default function Services() {
         xs={12}
         display={{ xs: "none", lg: "block" }}
         position="relative"
-        sx={{ marginBottom: 24, marginTop: 16 }}
+        mb={6}
+        mt={4}
       >
         <Box
           component="img"
@@ -151,12 +152,14 @@ export default function Services() {
         />
         <Box
           component="img"
-          src="topographicalLines4.svg"
+          src="topographicalLines3.svg"
           alt="topographical lines"
           position="absolute"
           zIndex={-1}
-          right={0}
-          width="100%"
+          top={32}
+          left="100%"
+          height="120%"
+          sx={{ transform: "scaleX(-1)" }}
         />
       </Grid>
       <Grid item md={12} lg={8}>
