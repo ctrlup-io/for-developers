@@ -1241,9 +1241,9 @@
     "@cspotcode/source-map-consumer" "0.8.0"
 
 "@ctrlup/rainbow-react@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@ctrlup/rainbow-react/-/rainbow-react-2.2.1.tgz#60fff08858313a485cdd2f35909fbf5301b0786a"
-  integrity sha512-t9VMtGtcUYp/LJZJcCK4jd8Jde/fEd4CD5w6ferMmcwto5o+1+CJhJij6bKTLzeZ3nowiMdyq84/LG75qsIOyg==
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@ctrlup/rainbow-react/-/rainbow-react-2.2.2.tgz#b167904343d62a5be55526ba2f75544eaf2a222b"
+  integrity sha512-/Gp7BExpPlVdZd2A4c/yK4gN9ODkxndarrzzbgBYOZ4/7zswXIjIj85PbCiX+a6AW/U8X354EKMxj8MoW8oLZQ==
   dependencies:
     prop-types "^15.8.1"
 
@@ -7028,7 +7028,7 @@ longest-streak@^3.0.0:
 
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
-  resolved "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
+  resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
