@@ -20,7 +20,7 @@ export default function PrivacyAndTerms() {
       </Typography>
       <Typography>
         Le Site est publié par la société Ctrl Up, une société par actions
-        simplifiée (SAS) au capital social de 10 000 € enregistrée au RCS de
+        simplifiée (SAS) au capital social de 85 000 € enregistrée au RCS de
         Bordeaux sous le numéro 888 875 127 et le numéro de Siret 888 875 127
         000 19.
       </Typography>
